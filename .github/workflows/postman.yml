@@ -55,7 +55,7 @@ jobs:
           allure generate --output ./allure-report
           link="./allure-report"
           echo $link
-          aws s3 sync "$link" "s3://${{ env.AWS_S3_BUCKET }}/${{ github.event.repository.name }}/${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}"
+          aws s3 sync "$link" "s3://${{ secrets.AWS_S3_BUCKET }}/${{ github.event.repository.name }}/${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}"
           report_url="http://myallurebucket-us.s3-website-us-east-1.amazonaws.com/${{ github.event.repository.name }}/${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}/index.html"
           echo "Report URL: $report_url"
           echo "url=$(echo $report_url)" >> $GITHUB_OUTPUT
