@@ -570,6 +570,12 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -585,9 +591,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"email\": \"ugokingsley5@gmail.com\"\n}"
+									"raw": "{\n\t\"email\": \"mosesgeorge2605@gmail.com\"\n}"
 								},
-								"url": "{{base_url}}/api/v1/users/send_mail_after_login/"
+								"url": "{{BASE_URL}}/api/v1/users/send_mail_after_login/"
 							},
 							"response": []
 						}
@@ -3839,36 +3845,36 @@
 		{
 			"listen": "prerequest",
 			"script": {
+				"id": "63cef4c9-c54a-436e-9dc2-3f439a3ff124",
 				"type": "text/javascript",
 				"exec": [
 					""
-				],
-				"id": "8e123d97-e6b1-4343-a968-5975fb491252"
+				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
+				"id": "4b8876bb-182a-4110-8a60-579950b3727f",
 				"type": "text/javascript",
 				"exec": [
 					""
-				],
-				"id": "71ede164-e124-431c-89f1-b839804c1472"
+				]
 			}
 		}
 	],
 	"variable": [
 		{
 			"key": "jwt_token",
-			"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNTA2NmUzN2EtYTEyZC00ZTIyLTkyYzEtYTBjMGNkZDg0Nzk3IiwidXNlcm5hbWUiOiJ1Z29raW5nc2xleTUiLCJleHAiOjE2OTY1ODk0NjcsImVtYWlsIjoidWdva2luZ3NsZXk1QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjk2NTAzMDY3fQ.8lZBpkBCnjnGiRN_QUGIDN8mMigWZ0WSRKmkFCMbx7M"
+			"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNDk3YWExMjItZmUwNS00N2ZhLWE5NDYtMjRmY2MxMzQ5ZDAwIiwidXNlcm5hbWUiOiJtb3Nlc2dlb3JnZTI2MDUiLCJleHAiOjE2OTg3Njg3MDAsImVtYWlsIjoibW9zZXNnZW9yZ2UyNjA1QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjk4NjgyMzAwfQ.cph9hH_XCyj-VnTIRx7JpAyhwI3-LLf5LgcUDN12ffk"
 		},
 		{
 			"key": "base_url",
-			"value": "localhost:5500"
+			"value": "https://apistagingci.herconomy.com"
 		},
 		{
 			"key": "uuid",
-			"value": "5066e37a-a12d-4e22-92c1-a0c0cdd84797"
+			"value": "497aa122-fe05-47fa-a946-24fcc1349d00"
 		}
 	]
 }
