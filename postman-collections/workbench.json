@@ -121,11 +121,31 @@
 					"item": [
 						{
 							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1019200c-baf7-4c49-8c4c-43457a2e3807",
+										"exec": [
+											"var responseBody = pm.response.json();",
+											"var token = responseBody.token;",
+											"pm.environment.set(\"token\", token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "8a277f79-dc02-4b4c-ba3c-f068555e05cd",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNDk3YWExMjItZmUwNS00N2ZhLWE5NDYtMjRmY2MxMzQ5ZDAwIiwidXNlcm5hbWUiOiJtb3Nlc2dlb3JnZTI2MDUiLCJleHAiOjE2OTg3NDk1MTUsImVtYWlsIjoibW9zZXNnZW9yZ2UyNjA1QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjk4NjYzMTE1fQ.luHBhusP_1vNjdb4su6lB-E99BDIcZ2bBcSxwNbHdxA"
+									}
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -135,9 +155,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"email\": \"mosesgeorge260805@gmail.com\",\n\t\"password\":\"Qwerty123@\"\n}"
+									"raw": "{\n\t\"email\": \"mosesgeorge2605@gmail.com\",\n\t\"password\":\"Qwerty123@\"\n}"
 								},
-								"url": "{{BASE_URL}}}/api/v1/rest-auth/login/"
+								"url": "{{BASE_URL}}/api/v1/rest-auth/login/"
 							},
 							"response": []
 						}
