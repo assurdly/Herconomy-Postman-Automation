@@ -469,7 +469,7 @@
 											"",
 											"pm.test(\"Verify that the error message exist\", function () {",
 											"    pm.expect(pm.response.json().non_field_errors).to.exist;",
-											"    pm.expect(pm.response.json().non_field_errors).to.equal(\"User with email does not exist.\")",
+											"    pm.expect(pm.response.json().non_field_errors).to.equal(\"Unable to log in with provided credentials.\")",
 											"});",
 											"",
 											"",
@@ -493,21 +493,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"email\": \"mosesgeorge26051@gmail.com\",\n\t\"password\":\"Qwerty123@\"\n}"
+									"raw": "{\n\t\"email\": \"mosesgeorge2605@gmail.com\",\n\t\"password\":\"Qwerty12345@\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/rest-auth/login/"
-							},
-							"response": []
-						},
-						{
-							"name": "New Request",
-							"id": "3c83bb54-a522-40d2-8b63-e734610b8522",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
 							},
 							"response": []
 						}
