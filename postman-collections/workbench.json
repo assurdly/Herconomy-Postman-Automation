@@ -135,7 +135,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"email\": \"ugokingsley5@gmail.com\",\n\t\"password\":\"Grace_123@###\"\n}"
+									"raw": "{\n\t\"email\": \"mosesgeorge260805@gmail.com\",\n\t\"password\":\"Qwerty123@\"\n}"
 								},
 								"url": "{{base_url}}/api/v1/rest-auth/login/"
 							},
