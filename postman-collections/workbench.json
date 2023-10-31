@@ -129,7 +129,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"first_name\":\"moses\",\n\t\"last_name\": \"george\",\n\t\"email\":\"mosesgeorge260805@gmail.com\",\n\t\"password1\":\"Qwerty123@\",\n\t\"password2\":\"Qwerty123@\"\n\t\n}"
+									"raw": "{\n\t\"first_name\":\"favour\",\n\t\"last_name\": \"tester\",\n\t\"email\":\"Favourdesent@gmail.com\",\n\t\"password1\":\"@passwordA1\",\n\t\"password2\":\"@passwordA1\"\n\t\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/rest-auth/registration/"
 							},
@@ -472,7 +472,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"email\": \"mosesgeorge2605@gmail.com\",\n\t\"password\":\"Qwerty123@\"\n}"
+									"raw": "{\n\t\"email\": \"favourdesent@gmail.com\",\n\t\"password\":\"@passwordA1\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/rest-auth/login/"
 							},
@@ -594,7 +594,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"email\": \"mosesgeorge2605@gmail.com\",\n\t\"password\":\"Qwerty12345@\"\n}"
+									"raw": "{\n\t\"email\": \"Favourdesent@gmail.com\",\n\t\"password\":\"Qwerty12345@\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/rest-auth/login/"
 							},
@@ -622,13 +622,13 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "{{JWT_TOKEN}}",
+										"value": "{{jwt_token}}",
 										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"token\": \"123492\"\n}"
+									"raw": "{\n    \"token\": \"207627\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/accounts/verify_email/"
 							},
@@ -685,11 +685,11 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "{{JWT_TOKEN}}",
+										"value": "{{jwt_token}}",
 										"type": "text"
 									}
 								],
-								"url": "{{base_url}}/api/v1/accounts/resend_email_verification/"
+								"url": "{{BASE_URL}}/api/v1/accounts/resend_email_verification/"
 							},
 							"response": []
 						}
@@ -3975,7 +3975,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "2ae8d015-3cac-4d3a-b0f0-84a16c4bfcc1",
+				"id": "0d4d7485-1eb1-4820-8710-49345554a0ef",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -3985,7 +3985,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "b0d1e375-8044-4ecc-a089-6ba83fa3b77c",
+				"id": "e5b65a67-effc-4ef2-970c-151dae9959ba",
 				"type": "text/javascript",
 				"exec": [
 					""
