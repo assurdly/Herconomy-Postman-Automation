@@ -213,6 +213,107 @@
 									"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYmUwMmI0MDItZTE2ZC00MzA1LWI1NjYtNjNiMzY1YWNlOTA0IiwidXNlcm5hbWUiOiJtb3Nlc2dlb3JnZTI2MDgwNSIsImV4cCI6MTY5ODIzNzIxOCwiZW1haWwiOiJtb3Nlc2dlb3JnZTI2MDgwNUBnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTY5ODE1MDgxOH0.Sbp5_m09SP5IrlNd8T868UaEqyKs15Dzx0DmJ7MPNCM\",\n    \"user\": {\n        \"id\": \"be02b402-e16d-4305-b566-63b365ace904\",\n        \"username\": \"mosesgeorge260805\",\n        \"email\": \"mosesgeorge260805@gmail.com\",\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"moniker\": \"user\",\n        \"tier\": \"notier\",\n        \"user_tag\": \"HERC-38307\",\n        \"gender\": null,\n        \"title\": null,\n        \"phone_number\": null,\n        \"phone_number_verified\": false,\n        \"interest\": null,\n        \"photo\": null,\n        \"onboarded\": false,\n        \"date_of_birth\": null,\n        \"is_email_verified\": false,\n        \"is_kyc_verified\": false,\n        \"is_kyc_submitted\": false,\n        \"is_bvn_verified\": false,\n        \"is_address_doc_verified\": false,\n        \"is_address_doc_submitted\": false,\n        \"halal\": false,\n        \"is_blocked\": false,\n        \"is_subscribed\": false,\n        \"gold_card_status\": \"Not Issued\",\n        \"company_name\": null,\n        \"nationality\": null,\n        \"location\": null,\n        \"following\": false,\n        \"follower\": false,\n        \"job_location\": null,\n        \"education\": [],\n        \"my_groups\": [],\n        \"my_topics\": [],\n        \"profession\": null,\n        \"job_title\": null,\n        \"bio\": null,\n        \"industry\": null,\n        \"facebook_id\": null,\n        \"twitter_id\": null,\n        \"linkedin_id\": null,\n        \"notification_id\": null,\n        \"date_joined\": \"2023-10-24T13:33:34.292275Z\",\n        \"date_modified\": \"2023-10-24T13:33:37.673964Z\",\n        \"status\": false,\n        \"gql_acc\": false,\n        \"subcribed_to_mail\": true,\n        \"compromised\": false,\n        \"account_locked\": false,\n        \"salary_range\": null,\n        \"has_performed_transaction\": false\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "Register 2 Copy",
+							"id": "57e92df4-7a1a-46e9-9724-db4acbc4f2f4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"first_name\":\"favour\",\n\t\"last_name\": \"tester\",\n\t\"email\":\"Favourdesent@gmail.com\",\n\t\"password1\":\"@passwordA1\",\n\t\"password2\":\"@passwordA1\"\n\t\n}"
+								},
+								"url": "{{BASE_URL}}/api/v1/rest-auth/registration/"
+							},
+							"response": [
+								{
+									"id": "8330352f-5516-472f-a24a-df4ec38c88d6",
+									"name": "Register",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"first_name\":\"moses\",\n\t\"last_name\": \"george\",\n\t\"email\":\"mosesgeorge260805@gmail.com\",\n\t\"password1\":\"Qwerty123@\",\n\t\"password2\":\"Qwerty123@\"\n\t\n}"
+										},
+										"url": "{{BASE_URL}}/api/v1/rest-auth/registration/"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.18.0 (Ubuntu)"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Oct 2023 12:33:40 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1449"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie, Origin"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "messages=\"0732d56b77d7ea9f2361ba292fa9dcfbfb00d263$[[\\\"__json_message\\\"\\0540\\05425\\054\\\"Successfully signed in as mosesgeorge260805.\\\"]]\"; HttpOnly; Path=/; SameSite=Lax"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "csrftoken=04HfJMPRCPs4q8DCXg5AcqUXa38kn29DlKs4lqygG0K5g4BZDZ7jTajA1KKnj7Tf; expires=Tue, 22 Oct 2024 12:33:40 GMT; HttpOnly; Max-Age=31449600; Path=/; SameSite=Lax"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "sessionid=a87qc4n70v9oqzdmy6btp5nbvxj88qzw; expires=Tue, 07 Nov 2023 12:33:40 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYmUwMmI0MDItZTE2ZC00MzA1LWI1NjYtNjNiMzY1YWNlOTA0IiwidXNlcm5hbWUiOiJtb3Nlc2dlb3JnZTI2MDgwNSIsImV4cCI6MTY5ODIzNzIxOCwiZW1haWwiOiJtb3Nlc2dlb3JnZTI2MDgwNUBnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTY5ODE1MDgxOH0.Sbp5_m09SP5IrlNd8T868UaEqyKs15Dzx0DmJ7MPNCM\",\n    \"user\": {\n        \"id\": \"be02b402-e16d-4305-b566-63b365ace904\",\n        \"username\": \"mosesgeorge260805\",\n        \"email\": \"mosesgeorge260805@gmail.com\",\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"moniker\": \"user\",\n        \"tier\": \"notier\",\n        \"user_tag\": \"HERC-38307\",\n        \"gender\": null,\n        \"title\": null,\n        \"phone_number\": null,\n        \"phone_number_verified\": false,\n        \"interest\": null,\n        \"photo\": null,\n        \"onboarded\": false,\n        \"date_of_birth\": null,\n        \"is_email_verified\": false,\n        \"is_kyc_verified\": false,\n        \"is_kyc_submitted\": false,\n        \"is_bvn_verified\": false,\n        \"is_address_doc_verified\": false,\n        \"is_address_doc_submitted\": false,\n        \"halal\": false,\n        \"is_blocked\": false,\n        \"is_subscribed\": false,\n        \"gold_card_status\": \"Not Issued\",\n        \"company_name\": null,\n        \"nationality\": null,\n        \"location\": null,\n        \"following\": false,\n        \"follower\": false,\n        \"job_location\": null,\n        \"education\": [],\n        \"my_groups\": [],\n        \"my_topics\": [],\n        \"profession\": null,\n        \"job_title\": null,\n        \"bio\": null,\n        \"industry\": null,\n        \"facebook_id\": null,\n        \"twitter_id\": null,\n        \"linkedin_id\": null,\n        \"notification_id\": null,\n        \"date_joined\": \"2023-10-24T13:33:34.292275Z\",\n        \"date_modified\": \"2023-10-24T13:33:37.673964Z\",\n        \"status\": false,\n        \"gql_acc\": false,\n        \"subcribed_to_mail\": true,\n        \"compromised\": false,\n        \"account_locked\": false,\n        \"salary_range\": null,\n        \"has_performed_transaction\": false\n    }\n}"
+								}
+							]
 						}
 					],
 					"id": "e312c710-2151-4962-949a-032807df0c3b"
@@ -453,6 +554,264 @@
 								}
 							],
 							"id": "8a277f79-dc02-4b4c-ba3c-f068555e05cd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNDk3YWExMjItZmUwNS00N2ZhLWE5NDYtMjRmY2MxMzQ5ZDAwIiwidXNlcm5hbWUiOiJtb3Nlc2dlb3JnZTI2MDUiLCJleHAiOjE2OTg3NDk1MTUsImVtYWlsIjoibW9zZXNnZW9yZ2UyNjA1QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjk4NjYzMTE1fQ.luHBhusP_1vNjdb4su6lB-E99BDIcZ2bBcSxwNbHdxA"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"favourdesent@gmail.com\",\n\t\"password\":\"@passwordA1\"\n}"
+								},
+								"url": "{{BASE_URL}}/api/v1/rest-auth/login/"
+							},
+							"response": []
+						},
+						{
+							"name": "Login Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1019200c-baf7-4c49-8c4c-43457a2e3807",
+										"exec": [
+											"var responseBody = pm.response.json();",
+											"var token = responseBody.token;",
+											"pm.environment.set(\"token\", token);",
+											"",
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"Response is an object with user property\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('user');",
+											"});",
+											"",
+											"pm.test(\"User has an id property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('id');",
+											"});",
+											"",
+											"pm.test(\"User has a username property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('username');",
+											"});",
+											"",
+											"pm.test(\"User has an email property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('email');",
+											"});",
+											"",
+											"pm.test(\"User has a first_name property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('first_name');",
+											"});",
+											"",
+											"pm.test(\"User has a last_name property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('last_name');",
+											"});",
+											"",
+											"pm.test(\"User has a moniker property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('moniker');",
+											"});",
+											"",
+											"pm.test(\"User has a tier property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('tier');",
+											"});",
+											"",
+											"pm.test(\"User has a user_tag property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('user_tag');",
+											"});",
+											"",
+											"pm.test(\"User has a gender property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('gender');",
+											"});",
+											"",
+											"pm.test(\"User has a title property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('title');",
+											"});",
+											"",
+											"pm.test(\"User has a phone_number property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('phone_number');",
+											"});",
+											"",
+											"pm.test(\"User has a phone_number_verified property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('phone_number_verified');",
+											"});",
+											"",
+											"pm.test(\"User has an interest property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('interest');",
+											"});",
+											"",
+											"pm.test(\"User has a photo property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('photo');",
+											"});",
+											"",
+											"pm.test(\"User has an onboarded property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('onboarded');",
+											"});",
+											"",
+											"pm.test(\"User has a date_of_birth property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('date_of_birth');",
+											"});",
+											"",
+											"pm.test(\"User has an is_email_verified property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('is_email_verified');",
+											"});",
+											"",
+											"pm.test(\"User has an is_kyc_verified property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('is_kyc_verified');",
+											"});",
+											"",
+											"pm.test(\"User has an is_kyc_submitted property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('is_kyc_submitted');",
+											"});",
+											"",
+											"pm.test(\"User has an is_bvn_verified property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('is_bvn_verified');",
+											"});",
+											"",
+											"pm.test(\"User has an is_address_doc_verified property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('is_address_doc_verified');",
+											"});",
+											"",
+											"pm.test(\"User has an is_address_doc_submitted property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('is_address_doc_submitted');",
+											"});",
+											"",
+											"pm.test(\"User has a halal property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('halal');",
+											"});",
+											"",
+											"pm.test(\"User has an is_blocked property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('is_blocked');",
+											"});",
+											"",
+											"pm.test(\"User has an is_subscribed property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('is_subscribed');",
+											"});",
+											"",
+											"pm.test(\"User has a gold_card_status property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('gold_card_status');",
+											"});",
+											"",
+											"pm.test(\"User has a company_name property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('company_name');",
+											"});",
+											"",
+											"pm.test(\"User has a nationality property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('nationality');",
+											"});",
+											"",
+											"pm.test(\"User has a location property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('location');",
+											"});",
+											"",
+											"pm.test(\"User has a following property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('following');",
+											"});",
+											"",
+											"pm.test(\"User has a follower property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('follower');",
+											"});",
+											"",
+											"pm.test(\"User has a job_location property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('job_location');",
+											"});",
+											"",
+											"pm.test(\"User has an education property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('education');",
+											"});",
+											"",
+											"pm.test(\"User has a my_groups property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('my_groups');",
+											"});",
+											"",
+											"pm.test(\"User has a my_topics property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('my_topics');",
+											"});",
+											"",
+											"pm.test(\"User has a profession property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('profession');",
+											"});",
+											"",
+											"pm.test(\"User has a job_title property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('job_title');",
+											"});",
+											"",
+											"pm.test(\"User has a bio property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('bio');",
+											"});",
+											"",
+											"pm.test(\"User has an industry property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('industry');",
+											"});",
+											"",
+											"pm.test(\"User has a facebook_id property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('facebook_id');",
+											"});",
+											"",
+											"pm.test(\"User has a twitter_id property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('twitter_id');",
+											"});",
+											"",
+											"pm.test(\"User has a linkedin_id property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('linkedin_id');",
+											"});",
+											"",
+											"pm.test(\"User has a notification_id property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('notification_id');",
+											"});",
+											"",
+											"pm.test(\"User has a date_joined property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('date_joined');",
+											"});",
+											"",
+											"pm.test(\"User has a date_modified property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('date_modified');",
+											"});",
+											"",
+											"pm.test(\"User has a status property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('status');",
+											"});",
+											"",
+											"pm.test(\"User has a gql_acc property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('gql_acc');",
+											"});",
+											"",
+											"pm.test(\"User has a subcribed_to_mail property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('subcribed_to_mail');",
+											"});",
+											"",
+											"pm.test(\"User has a compromised property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('compromised');",
+											"});",
+											"",
+											"pm.test(\"User has an account_locked property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('account_locked');",
+											"});",
+											"",
+											"pm.test(\"User has a salary_range property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('salary_range');",
+											"});",
+											"",
+											"pm.test(\"User has a has_performed_transaction property\", function () {",
+											"    pm.expect(pm.response.json().user).to.have.property('has_performed_transaction');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "fe556965-e8ce-43b6-83e3-878ec44e3421",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
