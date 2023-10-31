@@ -230,7 +230,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"first_name\":\"favour\",\n\t\"last_name\": \"tester\",\n\t\"email\":\"Favourdesent@gmail.com\",\n\t\"password1\":\"@passwordA1\",\n\t\"password2\":\"@passwordA1\"\n\t\n}"
+									"raw": "{\n\t\"first_name\":\"precious\",\n\t\"last_name\": \"PM\",\n\t\"email\":\"precious.goziemba@gmail.com\",\n\t\"password1\":\"Password@3\",\n\t\"password2\":\"Password@3\"\n\t\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/rest-auth/registration/"
 							},
@@ -4334,7 +4334,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0d4d7485-1eb1-4820-8710-49345554a0ef",
+				"id": "7ac01c57-4c3c-464b-8484-4353add869ae",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -4344,7 +4344,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e5b65a67-effc-4ef2-970c-151dae9959ba",
+				"id": "2b72c337-4d59-48d7-ab69-f1999f3347d8",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -4355,7 +4355,7 @@
 	"variable": [
 		{
 			"key": "jwt_token",
-			"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTZkYjEyNGItODhjYy00MTA3LWI0ZjEtZDQxMjNhMDUyOTQ0IiwidXNlcm5hbWUiOiJmYXZvdXJkZXNlbnQiLCJleHAiOjE2OTg4NDg3MDksImVtYWlsIjoiZmF2b3VyZGVzZW50QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjk4NzYyMzA5fQ.t2H127bIn_f3Wcso2SttmEgRZMM-vsb3uWV5dx_CtaY"
+			"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTZkYjEyNGItODhjYy00MTA3LWI0ZjEtZDQxMjNhMDUyOTQ0IiwidXNlcm5hbWUiOiJmYXZvdXJkZXNlbnQiLCJleHAiOjE2OTg4NTY4NjksImVtYWlsIjoiZmF2b3VyZGVzZW50QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjk4NzcwNDY5fQ.08z5c7MtA8tEWC46z5TOyEa0iakugmmdfdDFF_sb7x0"
 		},
 		{
 			"key": "base_url",
