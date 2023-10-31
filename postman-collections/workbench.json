@@ -114,7 +114,7 @@
 							]
 						},
 						{
-							"name": "Register  Copy",
+							"name": "Register 2",
 							"id": "21a31a7a-e3f9-4463-a62a-a3dc3d2db49c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3975,7 +3975,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "360d8368-9338-4e17-95b1-1178f0739627",
+				"id": "2ae8d015-3cac-4d3a-b0f0-84a16c4bfcc1",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -3985,7 +3985,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "03d0e67d-bbd8-4330-9aa4-436a5a03a384",
+				"id": "b0d1e375-8044-4ecc-a089-6ba83fa3b77c",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -3996,7 +3996,7 @@
 	"variable": [
 		{
 			"key": "jwt_token",
-			"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNDk3YWExMjItZmUwNS00N2ZhLWE5NDYtMjRmY2MxMzQ5ZDAwIiwidXNlcm5hbWUiOiJtb3Nlc2dlb3JnZTI2MDUiLCJleHAiOjE2OTg3Njk1ODMsImVtYWlsIjoibW9zZXNnZW9yZ2UyNjA1QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjk4NjgzMTgzfQ.ohgqQhkWnSUuJIT1ugHWyNknFXb-bV5K8UuRi3qSOD0"
+			"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTZkYjEyNGItODhjYy00MTA3LWI0ZjEtZDQxMjNhMDUyOTQ0IiwidXNlcm5hbWUiOiJmYXZvdXJkZXNlbnQiLCJleHAiOjE2OTg4NDg3MDksImVtYWlsIjoiZmF2b3VyZGVzZW50QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjk4NzYyMzA5fQ.t2H127bIn_f3Wcso2SttmEgRZMM-vsb3uWV5dx_CtaY"
 		},
 		{
 			"key": "base_url",
