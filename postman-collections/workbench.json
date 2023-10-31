@@ -628,7 +628,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"token\": \"207627\"\n}"
+									"raw": "{\n    \"token\": \"554578\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/accounts/verify_email/"
 							},
@@ -754,9 +754,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"phone_number\":\"+2347033094539\"\n}"
+									"raw": "{\n\t\"phone_number\":\"+2349033362914\"\n}"
 								},
-								"url": "{{base_url}}/api/v1/users/send_otp_code/"
+								"url": "{{BASE_URL}}/api/v1/users/send_otp_code/"
 							},
 							"response": []
 						}
@@ -787,9 +787,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"phone_number\": \"2347033094539\",\n\t\"the_otp\": \"173471\"\n}"
+									"raw": "{\n\t\"phone_number\": \"2349033362914\",\n\t\"the_otp\": \"439310\"\n}"
 								},
-								"url": "{{base_url}}/api/v1/users/verify_otp/"
+								"url": "{{BASE_URL}}/api/v1/users/verify_otp/"
 							},
 							"response": []
 						}
