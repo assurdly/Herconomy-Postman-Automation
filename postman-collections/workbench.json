@@ -987,7 +987,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"token\": \"554578\"\n}"
+									"raw": "{\n    \"token\": \"266038\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/accounts/verify_email/"
 							},
