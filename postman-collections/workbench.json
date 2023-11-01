@@ -316,8 +316,109 @@
 							]
 						},
 						{
-							"name": "Register empty first name",
+							"name": "Register empty field for email",
 							"id": "0b95ed9b-d4fd-4f47-bf1d-f862f242a748",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"first_name\":\"test\",\n\t\"last_name\": \"PM\",\n\t\"email\":\"\",\n\t\"password1\":\"Password@3\",\n\t\"password2\":\"Password@3\"\n\t\n}"
+								},
+								"url": "{{BASE_URL}}/api/v1/rest-auth/registration/"
+							},
+							"response": [
+								{
+									"id": "3671dcd6-be38-4dd1-a22b-9bec33d825a6",
+									"name": "Register",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"first_name\":\"moses\",\n\t\"last_name\": \"george\",\n\t\"email\":\"mosesgeorge260805@gmail.com\",\n\t\"password1\":\"Qwerty123@\",\n\t\"password2\":\"Qwerty123@\"\n\t\n}"
+										},
+										"url": "{{BASE_URL}}/api/v1/rest-auth/registration/"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.18.0 (Ubuntu)"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Oct 2023 12:33:40 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1449"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie, Origin"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "messages=\"0732d56b77d7ea9f2361ba292fa9dcfbfb00d263$[[\\\"__json_message\\\"\\0540\\05425\\054\\\"Successfully signed in as mosesgeorge260805.\\\"]]\"; HttpOnly; Path=/; SameSite=Lax"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "csrftoken=04HfJMPRCPs4q8DCXg5AcqUXa38kn29DlKs4lqygG0K5g4BZDZ7jTajA1KKnj7Tf; expires=Tue, 22 Oct 2024 12:33:40 GMT; HttpOnly; Max-Age=31449600; Path=/; SameSite=Lax"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "sessionid=a87qc4n70v9oqzdmy6btp5nbvxj88qzw; expires=Tue, 07 Nov 2023 12:33:40 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYmUwMmI0MDItZTE2ZC00MzA1LWI1NjYtNjNiMzY1YWNlOTA0IiwidXNlcm5hbWUiOiJtb3Nlc2dlb3JnZTI2MDgwNSIsImV4cCI6MTY5ODIzNzIxOCwiZW1haWwiOiJtb3Nlc2dlb3JnZTI2MDgwNUBnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTY5ODE1MDgxOH0.Sbp5_m09SP5IrlNd8T868UaEqyKs15Dzx0DmJ7MPNCM\",\n    \"user\": {\n        \"id\": \"be02b402-e16d-4305-b566-63b365ace904\",\n        \"username\": \"mosesgeorge260805\",\n        \"email\": \"mosesgeorge260805@gmail.com\",\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"moniker\": \"user\",\n        \"tier\": \"notier\",\n        \"user_tag\": \"HERC-38307\",\n        \"gender\": null,\n        \"title\": null,\n        \"phone_number\": null,\n        \"phone_number_verified\": false,\n        \"interest\": null,\n        \"photo\": null,\n        \"onboarded\": false,\n        \"date_of_birth\": null,\n        \"is_email_verified\": false,\n        \"is_kyc_verified\": false,\n        \"is_kyc_submitted\": false,\n        \"is_bvn_verified\": false,\n        \"is_address_doc_verified\": false,\n        \"is_address_doc_submitted\": false,\n        \"halal\": false,\n        \"is_blocked\": false,\n        \"is_subscribed\": false,\n        \"gold_card_status\": \"Not Issued\",\n        \"company_name\": null,\n        \"nationality\": null,\n        \"location\": null,\n        \"following\": false,\n        \"follower\": false,\n        \"job_location\": null,\n        \"education\": [],\n        \"my_groups\": [],\n        \"my_topics\": [],\n        \"profession\": null,\n        \"job_title\": null,\n        \"bio\": null,\n        \"industry\": null,\n        \"facebook_id\": null,\n        \"twitter_id\": null,\n        \"linkedin_id\": null,\n        \"notification_id\": null,\n        \"date_joined\": \"2023-10-24T13:33:34.292275Z\",\n        \"date_modified\": \"2023-10-24T13:33:37.673964Z\",\n        \"status\": false,\n        \"gql_acc\": false,\n        \"subcribed_to_mail\": true,\n        \"compromised\": false,\n        \"account_locked\": false,\n        \"salary_range\": null,\n        \"has_performed_transaction\": false\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Register empty first name Copy",
+							"id": "a43c6a3f-0dcb-4856-a405-cf6cfb04b4ec",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -337,7 +438,7 @@
 							},
 							"response": [
 								{
-									"id": "3671dcd6-be38-4dd1-a22b-9bec33d825a6",
+									"id": "4e03907d-f711-4e72-8998-845a234e5f6a",
 									"name": "Register",
 									"originalRequest": {
 										"method": "POST",
