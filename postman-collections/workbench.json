@@ -417,8 +417,8 @@
 							]
 						},
 						{
-							"name": "Register empty first name Copy",
-							"id": "a43c6a3f-0dcb-4856-a405-cf6cfb04b4ec",
+							"name": "Register empty field for email Copy",
+							"id": "c9e6b9f4-84c1-4450-bd8e-dd243e407876",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -432,13 +432,13 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"first_name\":\"precious\",\n\t\"last_name\": \"PM\",\n\t\"email\":\"precious.goziemba@gmail.com\",\n\t\"password1\":\"Password@3\",\n\t\"password2\":\"Password@3\"\n\t\n}"
+									"raw": "{\n\t\"first_name\":\"test\",\n\t\"last_name\": \"PM\",\n\t\"email\":\"\",\n\t\"password1\":\"Password@3\",\n\t\"password2\":\"Password@3\"\n\t\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/rest-auth/registration/"
 							},
 							"response": [
 								{
-									"id": "4e03907d-f711-4e72-8998-845a234e5f6a",
+									"id": "dbaa669b-9069-4b35-9121-b005d6303bdb",
 									"name": "Register",
 									"originalRequest": {
 										"method": "POST",
