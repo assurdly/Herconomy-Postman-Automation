@@ -1060,6 +1060,23 @@
 					"item": [
 						{
 							"name": "Send Email After Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5cf364b4-781f-4da5-91bf-051ed6fc7c49",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"pm.test(\"Body matches string\", function () {",
+											"    pm.expect(pm.response.text(\"message\")).to.include(\"Login Email Notification already sent\");",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "8cd7f850-56fd-4084-b050-9becf99a7aaa",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1074,7 +1091,7 @@
 									},
 									{
 										"key": "Authorization",
-										"value": "{{JWT_TOKEN}}",
+										"value": "{{jwt_token}}",
 										"type": "text"
 									}
 								],
