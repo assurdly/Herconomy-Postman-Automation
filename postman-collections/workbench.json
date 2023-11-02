@@ -932,7 +932,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"email\": \"goziembaprecious@gmail.com\",\n\t\"password\":\"Password@3\"\n}"
+									"raw": "{\n\t\"email\": \"goziembaprecious@gmail.com\",\n\t\"password\":\"Password@12\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/rest-auth/login/"
 							},
@@ -1994,7 +1994,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"email\":\"favour@gmail.com\"\n}"
+									"raw": "{\n    \"email\":\"goziembaprecious@gmail.com\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/accounts/password_reset_request/"
 							},
