@@ -1556,6 +1556,20 @@
 					"item": [
 						{
 							"name": "Send OTP(Phone Number Verification) ",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5237a6db-8ce3-49f7-9b5a-a1cc7d20f764",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "76cec0c6-bd61-4868-b29e-f6ffc63f7d58",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
