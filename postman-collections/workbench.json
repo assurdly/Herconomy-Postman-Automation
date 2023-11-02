@@ -1542,7 +1542,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"email\": \"mosesgeorge2605@gmail.com\"\n}"
+									"raw": "{\n\t\"email\": \"favourdesent@gmail.com\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/users/send_mail_after_login/"
 							},
@@ -1575,7 +1575,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"phone_number\":\"+2349033362914\"\n}"
+									"raw": "{\n\t\"phone_number\":\"09033362914\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/users/send_otp_code/"
 							},
@@ -1608,7 +1608,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"phone_number\": \"2349033362914\",\n\t\"the_otp\": \"439310\"\n}"
+									"raw": "{\n\t\"phone_number\": \"2349033362914\",\n\t\"the_otp\": \"\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/users/verify_otp/"
 							},
