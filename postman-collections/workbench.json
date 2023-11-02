@@ -1603,6 +1603,50 @@
 					"item": [
 						{
 							"name": "Verify OTP(Phone Number Verification) invalid OTP",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0d65799c-4fd1-4c19-9e1b-50c792adae22",
+										"exec": [
+											"",
+											"pm.test(\"Response status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response has the required field - message\", function () {",
+											"    const responseData = pm.response.json();",
+											"",
+											"    pm.expect(responseData).to.be.an('object');",
+											"    pm.expect(responseData.message).to.exist.and.to.be.an('array');",
+											"});",
+											"",
+											"",
+											"pm.test(\"Message is a non-empty string\", function () {",
+											"  const responseData = pm.response.json();",
+											"  ",
+											"  pm.expect(responseData.message).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response time is in an acceptable range\", function () {",
+											"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Validate that the message array contains at least one element\", function () {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData.message).to.be.an('array').and.to.have.lengthOf.at.least(1, \"Array should contain at least one element\");",
+											"});",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "64e58de4-e650-4838-93e9-996633bed712",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1622,7 +1666,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"phone_number\": \"2349033362914\",\n\t\"the_otp\": \"\"\n}"
+									"raw": "{\n\t\"phone_number\": \"2349033362914\",\n\t\"the_otp\": \"827081\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/users/verify_otp/"
 							},
@@ -1649,7 +1693,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"phone_number\": \"2349033362914\",\n\t\"the_otp\": \"\"\n}"
+									"raw": "{\n\t\"phone_number\": \"2349033362914\",\n\t\"the_otp\": \"301199\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/users/verify_otp/"
 							},
@@ -1950,9 +1994,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"token\": \"\",\n    \"password1\": \"\"\n}"
+									"raw": "{\n    \"email\":\"favour@gmail.com\"\n}"
 								},
-								"url": "{{base_url}}/api/v1/accounts/password_reset_request/"
+								"url": "{{BASE_URL}}/api/v1/accounts/password_reset_request/"
 							},
 							"response": []
 						}
