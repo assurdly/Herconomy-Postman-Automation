@@ -1743,28 +1743,11 @@
 											"  pm.response.to.have.status(400);",
 											"});",
 											"",
-											"",
-											"pm.test(\"Response has the required field - detail\", function () {",
-											"    const responseData = pm.response.json();",
-											"    ",
-											"    pm.expect(responseData).to.be.an('object');",
-											"    pm.expect(responseData.detail).to.exist;",
-											"});",
-											"",
-											"",
-											"pm.test(\"Detail field is a non-empty string\", function () {",
-											"  const responseData = pm.response.json();",
-											"  ",
-											"  pm.expect(responseData.detail).to.be.a('string');",
-											"  pm.expect(responseData.detail).to.not.be.empty;",
-											"});",
-											"",
-											"",
 											"pm.test(\"Response body is in JSON format\", function () {",
 											"    pm.response.to.have.jsonBody();",
 											"});",
 											"pm.test(\"Body matches string\", function () {",
-											"    pm.expect(pm.response.text(\"detail\")).to.include(\"Old Password Incorrect\");",
+											"    pm.expect(pm.response.text(\"message\")).to.include(\"That password has already been used in the past\");",
 											"});",
 											"",
 											""
@@ -1793,7 +1776,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"old_password\": \"Grace_123#\",\n    \"password1\": \"Grace_123@###\",\n    \"password2\": \"Grace_123@###\"\n}"
+									"raw": "{\n\t\"old_password\": \"Password@3\",\n    \"password1\": \"Password@3\",\n    \"password2\": \"Password@3\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/users/change_password/"
 							},
@@ -1869,7 +1852,50 @@
 							"response": []
 						},
 						{
-							"name": "Change Password Copy 2",
+							"name": "Change Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3ab83e72-bbeb-487f-91cb-6ef6aa26cf5d",
+										"exec": [
+											"",
+											"pm.test(\"Response status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response has the required fields\", function() {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData).to.be.an('object');",
+											"    pm.expect(responseData.detail).to.exist.and.to.be.an('array');",
+											"    pm.expect(responseData.detail).to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+											"});",
+											"",
+											"",
+											"pm.test(\"Detail field is an array\", function () {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData.detail).to.be.an('array');",
+											"});",
+											"",
+											"",
+											"pm.test(\"Detail field is not empty\", function () {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData.detail).to.exist.and.to.not.be.empty;",
+											"});",
+											"pm.test(\"Body matches string\", function () {",
+											"    pm.expect(pm.response.text(\"detail\")).to.include(\"Successful\");",
+											"});",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "5cc42957-d9e4-4af2-9b87-42b1cdf553a4",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1890,7 +1916,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"old_password\": \"Password@3\",\n    \"password1\": \"Password12\",\n    \"password2\": \"Grace_123@###\"\n}"
+									"raw": "{\n\t\"old_password\": \"Password@3\",\n    \"password1\": \"Password12\",\n    \"password2\": \"Password12\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/users/change_password/"
 							},
