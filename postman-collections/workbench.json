@@ -1731,7 +1731,7 @@
 							"response": []
 						},
 						{
-							"name": "Change Password invalid old password Copy",
+							"name": "Change Password (used password)",
 							"event": [
 								{
 									"listen": "test",
@@ -1800,7 +1800,48 @@
 							"response": []
 						},
 						{
-							"name": "Change Password Copy",
+							"name": "Change Password (different password)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a3574c3b-ab54-444d-b200-fcb677d60128",
+										"exec": [
+											"",
+											"pm.test(\"Response status code is 400\", function () {",
+											"  pm.response.to.have.status(400);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response has the required field - detail\", function () {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData).to.be.an('object');",
+											"    pm.expect(responseData.detail).to.exist;",
+											"});",
+											"",
+											"",
+											"pm.test(\"Detail field is a non-empty string\", function () {",
+											"  const responseData = pm.response.json();",
+											"  ",
+											"  pm.expect(responseData.detail).to.be.a('string');",
+											"  pm.expect(responseData.detail).to.not.be.empty;",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response body is in JSON format\", function () {",
+											"    pm.response.to.have.jsonBody();",
+											"});",
+											"pm.test(\"Body matches string\", function () {",
+											"    pm.expect(pm.response.text(\"detail\")).to.include(\"Password not the same\");",
+											"});",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "7baf12d3-918f-4e87-9b0c-0ea42e686741",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1821,9 +1862,37 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"old_password\": \"Grace_123#\",\n    \"password1\": \"Grace_123@###\",\n    \"password2\": \"Grace_123@###\"\n}"
+									"raw": "{\n\t\"old_password\": \"Password@3\",\n    \"password1\": \"Password12\",\n    \"password2\": \"Grace_123@###\"\n}"
 								},
-								"url": "{{base_url}}/api/v1/users/change_password/"
+								"url": "{{BASE_URL}}/api/v1/users/change_password/"
+							},
+							"response": []
+						},
+						{
+							"name": "Change Password Copy 2",
+							"id": "5cc42957-d9e4-4af2-9b87-42b1cdf553a4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{jwt_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"old_password\": \"Password@3\",\n    \"password1\": \"Password12\",\n    \"password2\": \"Grace_123@###\"\n}"
+								},
+								"url": "{{BASE_URL}}/api/v1/users/change_password/"
 							},
 							"response": []
 						}
