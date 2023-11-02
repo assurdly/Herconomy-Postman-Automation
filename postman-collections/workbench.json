@@ -1575,7 +1575,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"phone_number\":\"09033362914\"\n}"
+									"raw": "{\n\t\"phone_number\":\"09096543598\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/users/send_otp_code/"
 							},
