@@ -1400,30 +1400,15 @@
 										"id": "9145fea2-be42-4619-a65a-1d627c45ad3d",
 										"exec": [
 											"",
-											"pm.test(\"Response status code is 200\", function () {",
-											"    pm.expect(pm.response.code).to.equal(200);",
-											"});",
-											"",
-											"",
-											"pm.test(\"Response has the required field - details\", function () {",
-											"    const responseData = pm.response.json();",
-											"    ",
-											"    pm.expect(responseData).to.be.an('object');",
-											"    pm.expect(responseData.details).to.exist.and.to.be.a('string');",
-											"});",
-											"",
-											"",
-											"pm.test(\"Details is a non-empty string\", function () {",
-											"    const responseData = pm.response.json();",
-											"    ",
-											"    pm.expect(responseData.details).to.exist.and.to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+											"pm.test(\"Response status code is 400\", function () {",
+											"    pm.expect(pm.response.code).to.equal(400);",
 											"});",
 											"",
 											"pm.test(\"Response is in JSON format\", function () {",
 											"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
 											"});",
 											"pm.test(\"Body matches string\", function () {",
-											"    pm.expect(pm.response.text(\"details\")).to.include(\"Account successfully verified\");",
+											"    pm.expect(pm.response.text(\"message\")).to.include(\"Token expired or does not exist. Kindly re-initiate email  confirmation\");",
 											"});",
 											"",
 											""
@@ -1452,7 +1437,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"token\": \"254776\"\n}"
+									"raw": "{\n    \"token\": \"4444\"\n}"
 								},
 								"url": "{{BASE_URL}}/api/v1/accounts/verify_email/"
 							},
