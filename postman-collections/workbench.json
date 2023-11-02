@@ -1588,8 +1588,35 @@
 					"name": "Verify OTP",
 					"item": [
 						{
-							"name": "Verify OTP(Phone Number Verification) ",
+							"name": "Verify OTP(Phone Number Verification) invalid OTP",
 							"id": "64e58de4-e650-4838-93e9-996633bed712",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{jwt_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"phone_number\": \"2349033362914\",\n\t\"the_otp\": \"\"\n}"
+								},
+								"url": "{{BASE_URL}}/api/v1/users/verify_otp/"
+							},
+							"response": []
+						},
+						{
+							"name": "Verify OTP(Phone Number Verification)",
+							"id": "6a0fc5a7-3cda-408d-92e3-9c38a85586d5",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
