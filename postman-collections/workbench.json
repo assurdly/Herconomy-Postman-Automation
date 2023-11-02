@@ -1360,7 +1360,6 @@
 									"script": {
 										"id": "a033549e-5399-414e-9d23-b52d8287d2a5",
 										"exec": [
-											"",
 											"pm.test(\"Response status code is 200\", function () {",
 											"  pm.expect(pm.response.code).to.equal(200);",
 											"});",
@@ -1372,12 +1371,8 @@
 											"    pm.expect(responseData).to.be.an('object');",
 											"    pm.expect(responseData.details).to.exist;",
 											"});",
-											"",
-											"",
-											"pm.test(\"Details field is a non-empty string\", function () {",
-											"  const responseData = pm.response.json();",
-											"  ",
-											"  pm.expect(responseData.details).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+											"pm.test(\"Body matches string\", function () {",
+											"    pm.expect(pm.response.text(\"details\")).to.include(\"Token sent to Email\");",
 											"});",
 											"",
 											"",
