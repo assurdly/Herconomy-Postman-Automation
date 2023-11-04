@@ -3875,6 +3875,28 @@
 				},
 				{
 					"name": "Chats Contact Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "be0700b5-b740-41e6-882f-dd30e0699e19",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response is an object with data property\", function () {",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');",
+									"});",
+									"",
+									"pm.test(\"Response is an object with user_id property\", function () {",
+									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('user_id');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "5c23ad3d-9548-4c2b-b0d8-59f2d80989c9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3893,7 +3915,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{base_url}}/api/v1/chats/get_contact_info/"
+						"url": "{{BASE_URL}}/api/v1/chats/get_contact_info/"
 					},
 					"response": []
 				},
