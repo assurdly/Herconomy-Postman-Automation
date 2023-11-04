@@ -4330,7 +4330,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Data Plans (Globacom) Copy",
+					"name": "Get Data Plans (Mtn)",
 					"event": [
 						{
 							"listen": "test",
@@ -4394,7 +4394,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}/api/v1/billspay/data/?category=Data&service=Globacom",
+							"raw": "{{BASE_URL}}/api/v1/billspay/data/?category=Data&service=Mtn",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -4412,7 +4412,359 @@
 								},
 								{
 									"key": "service",
-									"value": "Globacom",
+									"value": "Mtn",
+									"description": "Mtn, Airtel, Globacom, Smile, Ntel"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data Plans (Smile)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "32c6b88a-82aa-4ab1-910b-ae112507e6ab",
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.status_code).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.service_name).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.packages).to.exist.and.to.be.an('array');",
+									"    pm.expect(responseData.other_json).to.exist.and.to.be.an('object');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Verify that the 'packages' array is present and contains at least one element\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.packages).to.exist.and.to.be.an('array');",
+									"    pm.expect(responseData.packages.length).to.be.at.least(1, \"At least one element should be present in the 'packages' array\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Verify that the 'other_json' object is empty\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.other_json).to.be.empty;",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "d1226284-fbd7-4d9d-bcf1-efe76da752a5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/billspay/data/?category=Data&service=Smile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"billspay",
+								"data",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Data"
+								},
+								{
+									"key": "service",
+									"value": "Smile",
+									"description": "Mtn, Airtel, Globacom, Smile, Ntel"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data Plans (Ntel)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "32c6b88a-82aa-4ab1-910b-ae112507e6ab",
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.status_code).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.service_name).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.packages).to.exist.and.to.be.an('array');",
+									"    pm.expect(responseData.other_json).to.exist.and.to.be.an('object');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Verify that the 'packages' array is present and contains at least one element\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.packages).to.exist.and.to.be.an('array');",
+									"    pm.expect(responseData.packages.length).to.be.at.least(1, \"At least one element should be present in the 'packages' array\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Verify that the 'other_json' object is empty\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.other_json).to.be.empty;",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "cee5b704-7dcd-4e45-8742-47e3a9b65483",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/billspay/data/?category=Data&service=Ntel",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"billspay",
+								"data",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Data"
+								},
+								{
+									"key": "service",
+									"value": "Ntel",
+									"description": "Mtn, Airtel, Globacom, Smile, Ntel"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data Plans (invalid service)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "32c6b88a-82aa-4ab1-910b-ae112507e6ab",
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 400\", function () {",
+									"    pm.expect(pm.response.code).to.equal(400);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Validate the error message structure\", function () {",
+									"  const responseData = pm.response.json();",
+									"",
+									"  pm.expect(responseData).to.be.an('object');",
+									"  pm.expect(responseData.message).to.exist.and.to.be.an('object');",
+									"  pm.expect(responseData.message.category).to.exist.and.to.be.an('array');",
+									"  pm.expect(responseData.message.service).to.exist.and.to.be.an('array');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Category field is required and should be an array\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.message).to.exist.and.to.be.an('object');",
+									"    pm.expect(responseData.message.category).to.exist.and.to.be.an('array');",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text(\"service\")).to.include(\"Inputed service must be one of: ['Airtel', '9Mobile', 'Globacom', 'Mtn', 'Smile', 'Ntel\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "88670ae1-5a4e-4b9f-9e9e-835e185dfbc1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/billspay/data/?category=Data&service=Ntelss",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"billspay",
+								"data",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Data"
+								},
+								{
+									"key": "service",
+									"value": "Ntelss",
+									"description": "Mtn, Airtel, Globacom, Smile, Ntel"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data Plans (invalid service) Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "32c6b88a-82aa-4ab1-910b-ae112507e6ab",
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 400\", function () {",
+									"    pm.expect(pm.response.code).to.equal(400);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Validate the error message structure\", function () {",
+									"  const responseData = pm.response.json();",
+									"",
+									"  pm.expect(responseData).to.be.an('object');",
+									"  pm.expect(responseData.message).to.exist.and.to.be.an('object');",
+									"  pm.expect(responseData.message.category).to.exist.and.to.be.an('array');",
+									"  pm.expect(responseData.message.service).to.exist.and.to.be.an('array');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Category field is required and should be an array\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.message).to.exist.and.to.be.an('object');",
+									"    pm.expect(responseData.message.category).to.exist.and.to.be.an('array');",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text(\"service\")).to.include(\"Inputed service must be one of: ['Airtel', '9Mobile', 'Globacom', 'Mtn', 'Smile', 'Ntel\");",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "590ebf3d-8ea2-41e1-9680-86b44c114b89",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/billspay/data/?category=Data&service=Ntelss",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"billspay",
+								"data",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Data"
+								},
+								{
+									"key": "service",
+									"value": "Ntelss",
 									"description": "Mtn, Airtel, Globacom, Smile, Ntel"
 								}
 							]
