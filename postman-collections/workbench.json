@@ -3851,6 +3851,20 @@
 			"item": [
 				{
 					"name": "Ask Questions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d64e9942-4192-42cf-a8d9-0fb01d8773a2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "0306e442-cdc2-4145-a5b6-df7d53eb0c9b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3869,7 +3883,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{base_url}}/api/v1/askquestions/"
+						"url": "{{BASE_URL}}/api/v1/askquestions/"
 					},
 					"response": []
 				},
@@ -3885,12 +3899,13 @@
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									"pm.test(\"Response is an object with data property\", function () {",
-									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('data');",
+									"pm.test(\"Response is an array\", function () {",
+									"    pm.expect(pm.response.json()).to.be.an('array');",
 									"});",
 									"",
-									"pm.test(\"Response is an object with user_id property\", function () {",
-									"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('user_id');",
+									"pm.test(\"Response array is not empty\", function () {",
+									"    var responseArray = pm.response.json();",
+									"    pm.expect(responseArray).to.have.length.above(0);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -3921,6 +3936,20 @@
 				},
 				{
 					"name": "Chats Viewed Messages",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "62075b6d-32fe-4950-8dad-bcbd18bde626",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "894c3a09-1350-4536-b9ad-529407ab713f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3939,12 +3968,66 @@
 								"type": "text"
 							}
 						],
-						"url": "{{base_url}}/api/v1/chats/get_viewed_messages/"
+						"url": "{{BASE_URL}}/api/v1/chats/get_viewed_messages/"
 					},
 					"response": []
 				},
 				{
 					"name": "Feeds",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3eaa7e38-f6a7-4412-a403-8f3b8289157b",
+								"exec": [
+									"",
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Validate the response structure\", function () {",
+									"  const responseData = pm.response.json();",
+									"  ",
+									"  pm.expect(responseData).to.be.an('object');",
+									"  pm.expect(responseData.count).to.exist;",
+									"  pm.expect(responseData.pages).to.exist;",
+									"  pm.expect(responseData.result).to.exist;",
+									"  pm.expect(responseData.page).to.exist;",
+									"});",
+									"",
+									"",
+									"pm.test(\"Verify the presence of the 'result' array and its length\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData.result).to.exist;",
+									"    pm.expect(responseData.result).to.be.an('array');",
+									"    pm.expect(responseData.result.length).to.equal(0);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Count and pages are non-negative integers\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.count).to.be.a('number').and.to.be.at.least(0);",
+									"    pm.expect(responseData.pages).to.be.a('number').and.to.be.at.least(0);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Verify that 'page' is a non-negative integer\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.page).to.exist;",
+									"    pm.expect(responseData.page).to.be.a('number');",
+									"    pm.expect(responseData.page).to.be.at.least(0);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "2301c9cc-ae84-4144-b33b-896f7be3b1ac",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -3963,7 +4046,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{base_url}}/api/v1/feeds/"
+						"url": "{{BASE_URL}}/api/v1/feeds/"
 					},
 					"response": []
 				}
