@@ -4719,7 +4719,7 @@
 									"    pm.expect(responseData.message.category).to.exist.and.to.be.an('array');",
 									"});",
 									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text(\"service\")).to.include(\"Inputed service must be one of: ['Airtel', '9Mobile', 'Globacom', 'Mtn', 'Smile', 'Ntel\");",
+									"    pm.expect(pm.response.text(\"category\")).to.include(\"Inputed category must be one of: ['Data']\");",
 									"});",
 									""
 								],
@@ -4746,7 +4746,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{BASE_URL}}/api/v1/billspay/data/?category=Data&service=Ntelss",
+							"raw": "{{BASE_URL}}/api/v1/billspay/data/?category=Datss&service=Ntel",
 							"host": [
 								"{{BASE_URL}}"
 							],
@@ -4760,11 +4760,11 @@
 							"query": [
 								{
 									"key": "category",
-									"value": "Data"
+									"value": "Datss"
 								},
 								{
 									"key": "service",
-									"value": "Ntelss",
+									"value": "Ntel",
 									"description": "Mtn, Airtel, Globacom, Smile, Ntel"
 								}
 							]
