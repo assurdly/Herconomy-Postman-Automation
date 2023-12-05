@@ -42,14 +42,14 @@ jobs:
 
       - name: Run API Tests
         id: run-newman
-        working-directory: Postman-Collection
+        working-directory: ./Postman Collection
         shell: bash
         run: newman run https://api.postman.com/collections/25328432-e3eb9bab-1bc7-440e-9e57-143da6187475?access_key=${{ secrets.COLL_KEY }} -r allure
 
       - name: Generate and upload Allure Report
         if: ${{ always() }}
         id: run-allure
-        working-directory: Postman-Collection
+        working-directory: ./Postman Collection
         shell: bash
         run: |
           allure generate --output ./allure-report
