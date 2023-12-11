@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Dec 11 16:57:01 GMT 2023","Mon Dec 11 16:57:01 GMT 2023","27","Auth","","","","","Login - Invalid Email",""
+"passed","Mon Dec 11 16:57:01 GMT 2023","Mon Dec 11 16:57:01 GMT 2023","24","Auth","","","","","Send Email After Login",""
+"passed","Mon Dec 11 16:57:01 GMT 2023","Mon Dec 11 16:57:01 GMT 2023","15","Auth","","","","","Login - Invalid Password nTimes",""
+"passed","Mon Dec 11 16:57:01 GMT 2023","Mon Dec 11 16:57:01 GMT 2023","31","Auth","","","","","Login - Valid Email",""
+"passed","Mon Dec 11 16:57:01 GMT 2023","Mon Dec 11 16:57:01 GMT 2023","20","Auth","","","","","Login - Invalid Password",""
+"passed","Mon Dec 11 16:57:01 GMT 2023","Mon Dec 11 16:57:01 GMT 2023","57","Auth","","","","","Register ",""
