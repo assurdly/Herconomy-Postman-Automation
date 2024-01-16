@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Tue Jan 16 16:51:12 GMT 2024","Tue Jan 16 16:51:12 GMT 2024","21","Auth","","","","","Login - Invalid Password",""
+"broken","Tue Jan 16 16:51:12 GMT 2024","Tue Jan 16 16:51:12 GMT 2024","15","Auth","","","","","Login - Invalid Password nTimes",""
+"broken","Tue Jan 16 16:51:12 GMT 2024","Tue Jan 16 16:51:12 GMT 2024","25","Auth","","","","","Send Email After Login",""
+"broken","Tue Jan 16 16:51:12 GMT 2024","Tue Jan 16 16:51:12 GMT 2024","26","Auth","","","","","Login - Valid Email",""
+"broken","Tue Jan 16 16:51:12 GMT 2024","Tue Jan 16 16:51:12 GMT 2024","34","Auth","","","","","Login - Invalid Email",""
+"broken","Tue Jan 16 16:51:12 GMT 2024","Tue Jan 16 16:51:12 GMT 2024","44","Auth","","","","","Register ",""
