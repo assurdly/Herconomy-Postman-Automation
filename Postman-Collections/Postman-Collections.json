@@ -2578,7 +2578,7 @@
 							"name": "Onboarding",
 							"item": [
 								{
-									"name": "Create Kid Account- Blank form Copy",
+									"name": "Create Kid Account- Blank form",
 									"event": [
 										{
 											"listen": "test",
@@ -3695,7 +3695,7 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "{{jwt_token}}"
+												"value": "JWT {{token}}"
 											}
 										],
 										"url": "{{base_url}}/api/v1/kiddosave/wallet/get_all_child_balance/"
@@ -19773,42 +19773,34 @@
 	],
 	"variable": [
 		{
-			"id": "230d0ce4-f8a4-4878-ad9a-4698f23af945",
 			"key": "base_url",
 			"value": "localhost:5500"
 		},
 		{
-			"id": "9f103e25-e239-4361-81a8-b7ff927ec92d",
 			"key": "uuid",
 			"value": "5066e37a-a12d-4e22-92c1-a0c0cdd84797"
 		},
 		{
-			"id": "a6d567f0-42be-4a94-858e-475f65c32712",
 			"key": "topic_uuid",
 			"value": "5066e37a-a12d-4e22-92c1-a0c0cdd84798"
 		},
 		{
-			"id": "ad1c6578-ad03-436c-8e3b-7f910ce0ac7c",
 			"key": "staging_base_url",
 			"value": "https://staging.herconomy.com"
 		},
 		{
-			"id": "4089e94f-b773-4410-8850-644f8795d019",
 			"key": "kidAccountId",
 			"value": ""
 		},
 		{
-			"id": "15df9227-1fcd-4247-a8e5-ce72968ea136",
 			"key": "jwt_token",
 			"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNTA2NmUzN2EtYTEyZC00ZTIyLTkyYzEtYTBjMGNkZDg0Nzk3IiwidXNlcm5hbWUiOiJ1Z29raW5nc2xleTUiLCJleHAiOjE3MDA1NjM1NTQsImVtYWlsIjoidWdva2luZ3NsZXk1QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNzAwNDc3MTU0fQ.fJEw8qDpnb8hZBpcNPvYsY-lu_1h-ZKtX-PoxciZXTM"
 		},
 		{
-			"id": "98a133b7-3472-4d40-af82-cdf6f083e0ba",
 			"key": "kidWalletId",
 			"value": ""
 		},
 		{
-			"id": "4751326c-6647-4a5c-abed-3312c560490a",
 			"key": "reference",
 			"value": ""
 		}
