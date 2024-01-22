@@ -7346,7 +7346,7 @@
 														}
 													}
 												},
-												"url": "{{base_url}}/api/v1/kiddosave/wallet/claim_kiddosave_interest/"
+												"url": "{{staging_base_url}}/api/v1/kiddosave/wallet/claim_kiddosave_interest/"
 											},
 											"status": "Bad Request",
 											"code": 400,
@@ -8552,7 +8552,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":500, // Amount to be withdrawn from vault\n    \"destination\":\"\", // Destination of the withdrawal amount\n    \"autosave_id\":\"\", //  The user's vault ID\n    \"penalty_from\":\"\" // Where the penalty amount should be taken from\n}"
+											"raw": "{\n    \"amount\":500, // Amount to be withdrawn from vault\n    \"destination\":\"wallet\", // Destination of the withdrawal amount\n    \"autosave_id\":\"36c8c7b5-752b-4d51-865a-9f9508c9adee\", //  The user's vault ID\n    \"penalty_from\":\"withdraw_amount\", // Where the penalty amount should be taken from\n    \"password\":\"Tope09%@###\"\n}"
 										},
 										"url": "{{base_url}}/api/v1/autosave/withdraw_with_penalty_request/"
 									},
