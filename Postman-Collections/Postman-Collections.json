@@ -7406,12 +7406,12 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "{{jwt_token}}"
+												"value": "JWT {{token}}"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"kid_account_id\":\"\"\n}",
+											"raw": "{\n    \"kid_account_id\":\"af1fbafd-b263-4c12-a414-0957cf043d96\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7568,12 +7568,12 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "{{jwt_token}}"
+												"value": "JWT {{token}}"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"kid_account_id\":\"4c65b819-af02-44dc-84db-e27da107a075\"\n}",
+											"raw": "{\n    \"kid_account_id\":\"af1fbafd-b263-4c12-a414-0957cf043d96\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
