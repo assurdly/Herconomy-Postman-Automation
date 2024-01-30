@@ -7663,12 +7663,12 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "{{jwt_token}}"
+												"value": "JWT {{token}}"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"kid_account_id\":\"4c65b819-af02-44dc-84db-e27da107a075\"\n}",
+											"raw": "{\n    \"kid_account_id\":\"66cbc35e-8ebf-4513-9305-241423c44d37\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
