@@ -3698,7 +3698,8 @@
 												"value": "JWT {{token}}"
 											}
 										],
-										"url": "{{base_url}}/api/v1/kiddosave/wallet/get_all_child_balance/"
+										"url": "{{base_url}}/api/v1/kiddosave/wallet/get_all_child_balance/",
+										"description": "\nThis endpoint makes an HTTP GET request to retrieve the total balance for all children in the KiddoSave wallet. The response will be in JSON format with the total balance as the key-value pair. \n\nThe last execution of this request returned a status code of 200, indicating a successful response, and the content type was application/json. The response body contained the total balance as 0.\n\n"
 									},
 									"response": [
 										{
