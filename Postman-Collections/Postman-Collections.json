@@ -6008,6 +6008,44 @@
 								},
 								{
 									"name": "Get all kiddosave goals",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "c9931f9b-c09a-40f6-99cf-093ecdddfc46",
+												"exec": [
+													"pm.test(\"Response status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});",
+													"",
+													"pm.test(\"Response is an array of objects\", function () {",
+													"    pm.expect(pm.response.json()).to.be.an('array').that.is.not.empty;",
+													"    pm.response.json().forEach(function(goal) {",
+													"        pm.expect(goal).to.be.an('object');",
+													"    });",
+													"});",
+													"",
+													"pm.test(\"Each goal object has specific properties\", function () {",
+													"    pm.response.json().forEach(function(goal) {",
+													"        pm.expect(goal).to.have.property('id');",
+													"        pm.expect(goal).to.have.property('parent_email');",
+													"        pm.expect(goal).to.have.property('kid_account');",
+													"        pm.expect(goal).to.have.property('target_amount');",
+													"        pm.expect(goal).to.have.property('title');",
+													"        pm.expect(goal).to.have.property('automation');",
+													"        pm.expect(goal).to.have.property('created_at');",
+													"        pm.expect(goal).to.have.property('modified_at');",
+													"    });",
+													"});",
+													"",
+													"pm.test(\"Response time is less than 500ms\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(500);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "71f48619-6cf9-42a3-b448-15a4953c9e69",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
