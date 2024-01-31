@@ -1,0 +1,8 @@
+{
+	"first_name":"daeta",               
+	"last_name": "cty",                 
+	"email":"daetacty112@gmail.com",    
+	"password1":"Grace_123",            
+	"password2":"Grace_123"             
+	
+}
