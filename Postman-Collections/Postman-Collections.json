@@ -5113,6 +5113,19 @@
 								},
 								{
 									"name": "getChildKiddoSaveWalletTransactions",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7a7b045b-5fe1-44ba-87f9-bf05acde26ba",
+												"exec": [
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "6673e027-3eb7-486c-9064-ea268a3ffd2e",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
