@@ -2935,8 +2935,8 @@
 													"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('message');\r",
 													"});\r",
 													"\r",
-													"pm.test(\"Error Message for Age greater than 17 \", function () {\r",
-													"    pm.expect(pm.response.json().message[0]).to.equal('Kid must be 17 years or below');\r",
+													"pm.test(\"Error Message for Kiddosave account creation limit \", function () {\r",
+													"    pm.expect(pm.response.json().message[0]).to.equal('You have reached your limit for kiddosave acccount creation');\r",
 													"});\r",
 													""
 												],
@@ -3357,7 +3357,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"kid_account_id\": \"b04ebb36-ce7a-4b29-bbad-b40e681dad0c\",\n    \"status\": \"approved\"\n}",
+											"raw": "{\n    \"kid_account_id\": \"{{kidAccountId}}\",\n    \"status\": \"approved\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -3593,6 +3593,28 @@
 								},
 								{
 									"name": "re_upload_child_photo",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "90aeca08-014e-4400-9fa3-c29c4d971a05",
+												"exec": [
+													"var jsonData = pm.response.json();\r",
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"pm.test(\"Status code name has string\", function () {\r",
+													"    pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"pm.test(\"Success message is returned for photo re-upload\", function () {\r",
+													"   pm.expect(jsonData.message[0]).to.eql(\"Photo Re-uploaded Successfully\")\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "2d1d931e-ceb5-45fe-8019-5562226b76da",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -3755,6 +3777,28 @@
 								},
 								{
 									"name": "re_upload_child_document",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "548cc85d-533e-4f76-b9bb-2cce077f5e93",
+												"exec": [
+													"var jsonData = pm.response.json();\r",
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"pm.test(\"Status code name has string\", function () {\r",
+													"    pm.response.to.have.status(\"OK\");\r",
+													"});\r",
+													"pm.test(\"Success message is returned for document re-upload\", function () {\r",
+													"   pm.expect(jsonData.message[0]).to.eql(\"Document Re-uploaded Successfully\")\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "348c817f-7d89-4d0f-b948-7617706e15ef",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
