@@ -7764,12 +7764,12 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "{{jwt_token}}"
+												"value": "JWT {{token}}"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"kid_account_id\":\"\"\n}",
+											"raw": "{\n    \"kid_account_id\":\"{{kidAccountId}}\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -7864,7 +7864,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"kid_account_id\":\"af1fbafd-b263-4c12-a414-0957cf043d96\"\n}",
+											"raw": "{\n    \"kid_account_id\":\"{{kidAccountId}}\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
