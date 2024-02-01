@@ -5122,12 +5122,12 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "{{jwt_token}}"
+												"value": "JWT {{token}}"
 											}
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"kid_account\":\"d83de287-60d6-4273-9a8c-caad91843488\"\n}",
+											"raw": "{\n    \"kid_account\":\"{{kidWalletId}}\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
