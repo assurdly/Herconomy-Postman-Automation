@@ -6219,7 +6219,7 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNTA2NmUzN2EtYTEyZC00ZTIyLTkyYzEtYTBjMGNkZDg0Nzk3IiwidXNlcm5hbWUiOiJ1Z29raW5nc2xleTUiLCJleHAiOjE3MDA5OTUxMzksImVtYWlsIjoidWdva2luZ3NsZXk1QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNzAwOTA4NzM5fQ.ZlnHYutBnFyv59cxnJkJ5bDv66h6Ei-OaxwytV7fdl4"
+												"value": "JWT {{token}}"
 											}
 										],
 										"body": {
@@ -6227,7 +6227,7 @@
 											"formdata": [
 												{
 													"key": "kid_account_id",
-													"value": "d83de287-60d6-4273-9a8c-caad91843488",
+													"value": "022cdef1-34d0-4f10-89c5-8869a5381d5e",
 													"type": "text"
 												},
 												{
@@ -6242,7 +6242,7 @@
 												},
 												{
 													"key": "frequency",
-													"value": "daily",
+													"value": "monthly",
 													"type": "text"
 												},
 												{
@@ -6262,7 +6262,7 @@
 												},
 												{
 													"key": "pri_funding_source",
-													"value": "float",
+													"value": "card",
 													"type": "text"
 												},
 												{
@@ -6280,7 +6280,8 @@
 												{
 													"key": "banner",
 													"value": "",
-													"type": "text"
+													"type": "text",
+													"disabled": true
 												}
 											]
 										},
