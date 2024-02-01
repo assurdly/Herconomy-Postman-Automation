@@ -4631,6 +4631,34 @@
 								},
 								{
 									"name": "add_funds_with_parent_float",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "27221765-358a-46cd-8237-203f802c5e19",
+												"exec": [
+													"pm.test(\"Response status code is 201\", function () {\r",
+													"    pm.response.to.have.status(201);\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response is an object with id, kid_account, created_at, modified_at, account_number, and account_bank properties\", function () {\r",
+													"    pm.expect(pm.response.json()).to.be.an('object').that.includes.all.keys('id', 'kid_account', 'created_at', 'modified_at', 'account_number', 'account_bank');\r",
+													"});\r",
+													"\r",
+													"pm.test(\"kid_account property has specific attributes\", function () {\r",
+													"    var kidAccount = pm.response.json().kid_account;\r",
+													"    pm.expect(kidAccount).to.be.an('object').that.has.all.keys('id', 'parent_email', 'first_name', 'last_name', 'nickname', 'photo', 'date_of_birth', 'gender', 'onboarded', 'created_at', 'modified_at', 'kyc_status');\r",
+													"    pm.expect(kidAccount.onboarded).to.be.true;\r",
+													"});\r",
+													"\r",
+													"pm.test(\"Response time is less than 500ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "0bb3ff7c-8fed-48d7-ac46-b9412be8a263",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -4645,7 +4673,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":150,\n    \"kid_account_wallet_id\":\"ff70ee37-d2ca-461a-9f3c-80c69fd01d83\"\n}",
+											"raw": "{\n    \"amount\":150,\n    \"kid_account_wallet_id\":\"{{kidWalletId}}\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
