@@ -472,7 +472,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"sultan@assurdly.com\",       // Enter registered email\n\t\"password\":\"Test419$\"          // Enter Registered Password\n}"
+							"raw": "{\n\t\"email\": \"gbohunmimakinde@gmail.com\",       // Enter registered email\n\t\"password\":\"Amazing@work1\"          // Enter Registered Password\n}"
 						},
 						"url": "{{base_url}}/api/v1/rest-auth/login/"
 					},
