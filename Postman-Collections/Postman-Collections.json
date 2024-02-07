@@ -7424,7 +7424,7 @@
 												}
 											]
 										},
-										"url": "http://127.0.0.1:8000/api/v1/kiddosave/goals/withdraw_with_penalty_request/"
+										"url": "{{base_url}}/api/v1/kiddosave/goals/withdraw_with_penalty_request/"
 									},
 									"response": [
 										{
