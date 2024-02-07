@@ -7625,19 +7625,14 @@
 										"header": [
 											{
 												"key": "Authorization",
-												"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNTA2NmUzN2EtYTEyZC00ZTIyLTkyYzEtYTBjMGNkZDg0Nzk3IiwidXNlcm5hbWUiOiJ1Z29raW5nc2xleTUiLCJleHAiOjE3MDEwODE3MTEsImVtYWlsIjoidWdva2luZ3NsZXk1QGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNzAwOTk1MzExfQ.SkuII4H5BP_wHIC9vz5hQ6HF9L2hXWgxKEbJMtDTT_8"
+												"value": "JWT {{token}}"
 											}
 										],
 										"url": {
-											"raw": "http://127.0.0.1:8000/api/v1/kiddosave/goals/get_kiddosave_goal_trans/?kiddosave_goal_id=905ae906-05cd-4fb9-84ac-d4111c035cd1",
-											"protocol": "http",
+											"raw": "{{base_url}}/api/v1/kiddosave/goals/get_kiddosave_goal_trans/?kiddosave_goal_id=dd04526d-11d1-4b8e-ba20-be519ff40c94",
 											"host": [
-												"127",
-												"0",
-												"0",
-												"1"
+												"{{base_url}}"
 											],
-											"port": "8000",
 											"path": [
 												"api",
 												"v1",
@@ -7649,7 +7644,7 @@
 											"query": [
 												{
 													"key": "kiddosave_goal_id",
-													"value": "905ae906-05cd-4fb9-84ac-d4111c035cd1"
+													"value": "dd04526d-11d1-4b8e-ba20-be519ff40c94"
 												}
 											]
 										}
