@@ -1,0 +1,14 @@
+
+const responseBody = pm.response.json
+pm.test("Response status code is 400", function () {
+  pm.response.to.have.status(400);
+});
+pm.test("Response has the required field - detail", function () {
+    pm.expect(responseData).to.be.an('object');
+    pm.expect(responseData.detail).to.exist;
+});
+
+pm.test("Error message for invalid old password", function () {
+    pm.expect(responseBody.detail).to.eql("Old Password Incorrect");
+})
+

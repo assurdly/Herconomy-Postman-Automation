@@ -1,0 +1,8 @@
+const responseBody = pm.response.json
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+pm.test("Email Verifcation", function () {
+    pm.expect(responseBody.details).to.eql('Account successfully verified');
+});

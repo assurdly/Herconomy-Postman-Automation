@@ -1,0 +1,29 @@
+pm.test("Response status code is 201", function () {
+    pm.response.to.have.status(201);
+});
+
+var jsonData = pm.response.json();
+
+pm.test("Response is an object with token and user properties", function () {
+    pm.expect(jsonData).to.be.an('object').that.has.all.keys('token', 'user');
+});
+
+pm.test("User email is a string", function () {
+    pm.expect(jsonData.user.email).to.be.a('string');
+});
+
+pm.test("User ID is a string", function () {
+    pm.expect(jsonData.user.id).to.be.a('string');
+});
+
+pm.test("User phone_number_verified is a boolean", function () {
+    pm.expect(jsonData.user.phone_number_verified).to.be.a('boolean');
+});
+
+pm.test("User is_blocked is a boolean", function () {
+    pm.expect(jsonData.user.is_blocked).to.be.a('boolean');
+});
+
+pm.test("User has_kiddosave_account is a boolean", function () {
+    pm.expect(jsonData.user.has_kiddosave_account).to.be.a('boolean');
+});

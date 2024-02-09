@@ -1,0 +1,8 @@
+{
+	"first_name":"Sultan",               
+	"last_name": "Ajayi",                 
+	"email":"sultan+34@assurdly.com",    
+	"password1":"Test419$",            
+	"password2":"Test419$"             
+	
+}
