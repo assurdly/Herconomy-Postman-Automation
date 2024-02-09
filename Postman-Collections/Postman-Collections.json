@@ -2035,7 +2035,7 @@
 									"mode": "raw",
 									"raw": "{\n    \"kid_account_wallet_id\":\"d83de287-60d6-4273-9a8c-caad91843488\" \n}"
 								},
-								"url": "{{staging_base_url}}/api/v1/kiddosave/wallet/generateKiddoMonnifyNuban/"
+								"url": "{{base_url}}/api/v1/kiddosave/wallet/generateKiddoMonnifyNuban/"
 							},
 							"response": []
 						},
@@ -2084,7 +2084,7 @@
 									"mode": "raw",
 									"raw": "{\n    \"kid_account_wallet_id\":\"{{kidWalletId}}\" \n}"
 								},
-								"url": "{{staging_base_url}}/api/v1/kiddosave/wallet/generateKiddoMonnifyNuban/"
+								"url": "{{base_url}}/api/v1/kiddosave/wallet/generateKiddoMonnifyNuban/"
 							},
 							"response": [
 								{
@@ -2528,7 +2528,7 @@
 										}
 									}
 								},
-								"url": "{{staging_base_url}}/api/v1/kiddosave/wallet/add_funds_with_parent_float/"
+								"url": "{{base_url}}/api/v1/kiddosave/wallet/add_funds_with_parent_float/"
 							},
 							"response": [
 								{
@@ -4029,7 +4029,7 @@
 										}
 									]
 								},
-								"url": "https://staging.herconomy.com/api/v1/kiddosave/goals/create_kiddosave_goal/"
+								"url": "{{base_url}}/api/v1/kiddosave/goals/create_kiddosave_goal/"
 							},
 							"response": [
 								{
