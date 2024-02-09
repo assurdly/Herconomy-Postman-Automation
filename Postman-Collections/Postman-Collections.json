@@ -5580,7 +5580,7 @@
 							]
 						},
 						{
-							"name": "GET ALL KIDDO GOALS TRANS",
+							"name": "GET  KIDDO GOALS TRANS",
 							"id": "37379168-2f9f-4340-8edd-d03e0a5a437a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
