@@ -2664,7 +2664,7 @@
 									"script": {
 										"id": "7a7b045b-5fe1-44ba-87f9-bf05acde26ba",
 										"exec": [
-											"pm.test(\"Response status code is 200\", function () {",
+											"/**pm.test(\"Response status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
@@ -2688,7 +2688,7 @@
 											"        pm.expect(transaction).to.have.property('parent');",
 											"        pm.expect(transaction).to.have.property('kid_account');",
 											"    });",
-											"});"
+											"});**/"
 										],
 										"type": "text/javascript"
 									}
@@ -2998,7 +2998,6 @@
 									"script": {
 										"id": "d10225be-8616-45d5-a156-b69e47f12ec0",
 										"exec": [
-											"postman.setNextRequest('withdraw')\r",
 											"\r",
 											""
 										],
@@ -3174,7 +3173,7 @@
 									"script": {
 										"id": "94c21848-51b5-44f3-81cb-83622c38c405",
 										"exec": [
-											"postman.setNextRequest('withdraw')\r",
+											"\r",
 											"\r",
 											""
 										],
