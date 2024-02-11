@@ -1,6 +1,0 @@
-{
-    "amount":50,
-    "password":"Test419$",
-    "kid_account_wallet_id":"",
-    "reason":"fun"
-}
