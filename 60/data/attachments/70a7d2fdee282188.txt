@@ -1,5 +1,0 @@
-{
-	"old_password": "Test419$",
-    "password1": "Test419$",
-    "password2": "Test419$"
-}

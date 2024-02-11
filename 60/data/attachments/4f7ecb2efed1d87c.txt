@@ -1,9 +1,0 @@
-const responseBody = pm.response.json
-pm.test("Response status code is 400", function () {
-  pm.response.to.have.status(400);
-});
-
-pm.test("Error message for used password", function () {
-    pm.expect(responseBody.message).to.eql("That password has already been used in the past");
-});
-

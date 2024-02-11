@@ -1,7 +1,0 @@
-pm.test("Status code is 400", function () {
-    pm.response.to.have.status(400);
-});
-
-pm.test("Response has a message property", function () {
-    pm.expect(pm.response.json()).to.have.property('message');
-});

@@ -1,5 +1,0 @@
-{
-	"token": "",            
-    "password1": "",         
-    "email":"a@b.com"
-}
