@@ -1,0 +1,13 @@
+pm.test("Response status code is 400", function () {
+    pm.response.to.have.status(400);
+});
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("Bad Request");
+});
+pm.test("Response is an object with message property", function () {
+    pm.expect(pm.response.json()).to.be.an('object').that.has.property('message');
+});
+
+pm.test("Error Message for Kiddosave account creation limit ", function () {
+    pm.expect(pm.response.json().message[0]).to.equal('You have reached your limit for kiddosave acccount creation');
+});
