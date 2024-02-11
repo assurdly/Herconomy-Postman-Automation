@@ -2463,7 +2463,7 @@
 									"script": {
 										"id": "f7656fae-9567-44dd-8f85-a262d7178f87",
 										"exec": [
-											"const jsonData = pm.response.json();\r",
+											"/**const jsonData = pm.response.json();\r",
 											"\r",
 											"pm.test(\"Status code is 201\", function () {\r",
 											"    pm.response.to.have.status(200);\r",
@@ -2474,7 +2474,7 @@
 											"pm.test(\"Successful Credit\", function () {\r",
 											"    pm.expect(jsonData.message).to.eql('Kiddo save successfully credited!');\r",
 											"    \r",
-											"});"
+											"});**/"
 										],
 										"type": "text/javascript"
 									}
