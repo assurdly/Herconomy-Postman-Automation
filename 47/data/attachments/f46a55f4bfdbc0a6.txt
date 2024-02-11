@@ -1,4 +1,0 @@
-{
-	"email": "gbohunmimakinde@gmail.com",       
-	"password":"Amazing@work1"          
-}
