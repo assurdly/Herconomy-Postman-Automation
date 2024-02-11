@@ -1645,7 +1645,7 @@
 									"script": {
 										"id": "26e616bf-ee36-48cd-9c35-3b29d332bf7c",
 										"exec": [
-											"postman.setNextRequest(null)"
+											"postman.setNextRequest('get all kiddo wallets')"
 										],
 										"type": "text/javascript"
 									}
@@ -3297,7 +3297,7 @@
 									"script": {
 										"id": "d10225be-8616-45d5-a156-b69e47f12ec0",
 										"exec": [
-											"postman.setNextRequest(null)\r",
+											"postman.setNextRequest('withdraw')\r",
 											"\r",
 											""
 										],
@@ -6308,6 +6308,10 @@
 		},
 		{
 			"key": "kidAccountId",
+			"value": ""
+		},
+		{
+			"key": "reference",
 			"value": ""
 		}
 	]
