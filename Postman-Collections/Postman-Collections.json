@@ -1451,7 +1451,7 @@
 									"script": {
 										"id": "fa7112c4-9a8e-4058-bf29-da413ba93233",
 										"exec": [
-											"postman.setNextRequest(Deposit)"
+											"postman.setNextRequest('get all kiddo wallets')"
 										],
 										"type": "text/javascript"
 									}
@@ -5290,7 +5290,7 @@
 									"script": {
 										"id": "dc177c9c-a446-41b7-a85b-f691c79c7cf4",
 										"exec": [
-											"postman.setNextRequest(null)\r",
+											"postman.setNextRequest('FLOAT ADD FUNDS')\r",
 											"\r",
 											""
 										],
