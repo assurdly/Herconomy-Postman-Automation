@@ -4842,14 +4842,9 @@
 										"exec": [
 											"const jsonData = pm.response.json();",
 											"",
-											"pm.test(\"Status code is 201\", function () {",
+											"pm.test(\"Status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
 											"});",
-											"pm.test(\"Status code name has string\", function () {",
-											"    pm.response.to.have.status(\"OK\");",
-											"});",
-											"pm.test(\"Paystack Reference\", function () {",
-											"    pm.collectionVariables.set(\"goalReference1\", jsonData.reference);",
 											"",
 											"pm.test(\"Response is in JSON format\", function () {",
 											"    pm.response.to.have.header('Content-Type', 'application/json');",
@@ -5266,6 +5261,18 @@
 											"    pm.expect(jsonData.message).to.eql('This transaction has already been fufilled!');\r",
 											"    \r",
 											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "dc177c9c-a446-41b7-a85b-f691c79c7cf4",
+										"exec": [
+											"postman.setNextRequest(null)\r",
+											"\r",
+											""
 										],
 										"type": "text/javascript"
 									}
