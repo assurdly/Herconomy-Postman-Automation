@@ -1451,7 +1451,7 @@
 									"script": {
 										"id": "fa7112c4-9a8e-4058-bf29-da413ba93233",
 										"exec": [
-											"postman.setNextRequest(null)"
+											"postman.setNextRequest(Deposit)"
 										],
 										"type": "text/javascript"
 									}
