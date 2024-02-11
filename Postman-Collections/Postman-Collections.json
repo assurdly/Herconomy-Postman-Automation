@@ -830,6 +830,10 @@
 											"pm.test(\"Modified at is returned\", function () {\r",
 											"    var modifiedAt = jsonData.modified_at;\r",
 											"    pm.expect(modifiedAt).to.exist.and.to.be.a('string');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response is an object with message property\", function () {\r",
+											"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('message');\r",
 											"});"
 										],
 										"type": "text/javascript"
