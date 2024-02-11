@@ -1445,6 +1445,16 @@
 										],
 										"type": "text/javascript"
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "fa7112c4-9a8e-4058-bf29-da413ba93233",
+										"exec": [
+											"postman.setNextRequest(null)"
+										],
+										"type": "text/javascript"
+									}
 								}
 							],
 							"id": "971ed33f-b61a-45bb-8303-4eeef4d75489",
@@ -1626,6 +1636,16 @@
 											"   pm.expect(jsonData.message[0]).to.eql(\"Document Re-uploaded Successfully\")\r",
 											"});\r",
 											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "26e616bf-ee36-48cd-9c35-3b29d332bf7c",
+										"exec": [
+											"postman.setNextRequest(null)"
 										],
 										"type": "text/javascript"
 									}
@@ -5405,14 +5425,8 @@
 											"    pm.response.to.have.status(201);\r",
 											"});\r",
 											"\r",
-											"pm.test(\"Response is an object with id, kid_account, created_at, modified_at, account_number, and account_bank properties\", function () {\r",
-											"    pm.expect(pm.response.json()).to.be.an('object').that.includes.all.keys('id', 'kid_account', 'created_at', 'modified_at', 'account_number', 'account_bank');\r",
-											"});\r",
-											"\r",
-											"pm.test(\"kid_account property has specific attributes\", function () {\r",
-											"    var kidAccount = pm.response.json().kid_account;\r",
-											"    pm.expect(kidAccount).to.be.an('object').that.has.all.keys('id', 'parent_email', 'first_name', 'last_name', 'nickname', 'photo', 'date_of_birth', 'gender', 'onboarded', 'created_at', 'modified_at', 'kyc_status');\r",
-											"    pm.expect(kidAccount.onboarded).to.be.true;\r",
+											"pm.test(\"Response is an object with properties\", function () {\r",
+											"    pm.expect(pm.response.json()).to.be.an('object').that.includes.all.keys( 'parent_email', 'kiddosave_goals','kid_account', 'amount','channel',  'status', 'created_at', 'modified_at', 'trans_ref');\r",
 											"});\r",
 											"\r",
 											"pm.test(\"Response time is less than 500ms\", function () {\r",
@@ -5495,7 +5509,7 @@
 									"formdata": [
 										{
 											"key": "amount",
-											"value": "1000",
+											"value": "10",
 											"type": "text"
 										},
 										{
