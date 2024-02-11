@@ -2780,6 +2780,18 @@
 										],
 										"type": "text/javascript"
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "90634e18-b0ff-4d6b-9fca-2809c4a6d1a2",
+										"exec": [
+											"postman.setNextRequest(null)\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
 								}
 							],
 							"id": "e88db419-591c-452f-9302-4dd9683c3aec",
