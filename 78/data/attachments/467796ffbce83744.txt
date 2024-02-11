@@ -1,0 +1,10 @@
+{
+    "first_name": "",
+    "last_name": "",
+    "date_of_birth": "",
+    "nickname": "",
+    "gender": "",
+    "document_type":"",
+    "child_image":"",    
+    "id_unique_number":"" 
+}
