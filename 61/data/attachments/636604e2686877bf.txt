@@ -1,8 +1,0 @@
-{
-    "amount":500,
-    "cvv":"884",
-    "card_number":"507850785078507804",
-    "expiry_month":"11",
-    "expiry_year":"24",
-    "card_pin": "0000"
-}
