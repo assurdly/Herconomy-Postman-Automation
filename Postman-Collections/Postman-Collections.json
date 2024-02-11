@@ -3271,6 +3271,20 @@
 						},
 						{
 							"name": "create_kiddo_new_card_funding",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "d10225be-8616-45d5-a156-b69e47f12ec0",
+										"exec": [
+											"postman.setNextRequest(null)\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "77b193c2-2d62-4909-9111-c062d31e2c89",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3433,6 +3447,20 @@
 						},
 						{
 							"name": "VerifyOTP mob_confirm_kiddo_new_card_funding",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "94c21848-51b5-44f3-81cb-83622c38c405",
+										"exec": [
+											"postman.setNextRequest(null)\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "8901def1-a5ca-4752-979c-95321314938a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
