@@ -1,0 +1,29 @@
+var jsonData = pm.response.json();
+
+pm.test("Status code is 201", function () {
+    pm.response.to.have.status(201);
+});
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("Created");
+});
+pm.test("Kid Account Id", function () {
+    pm.collectionVariables.set("kidAccountId", jsonData.id);
+    
+});
+pm.test("Parent email is returned", function () {
+    var parentEmail = jsonData.parent_email;
+    pm.expect(parentEmail).to.exist.and.to.be.a('string');
+});
+pm.test("Created at is returned", function () {
+    var createdAt = jsonData.created_at;
+    pm.expect(createdAt).to.exist.and.to.be.a('string');
+});
+
+pm.test("Modified at is returned", function () {
+    var modifiedAt = jsonData.modified_at;
+    pm.expect(modifiedAt).to.exist.and.to.be.a('string');
+});
+
+pm.test("Response is an object with message property", function () {
+    pm.expect(pm.response.json()).to.be.an('object').that.has.property('message');
+});
