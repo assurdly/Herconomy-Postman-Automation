@@ -2484,7 +2484,7 @@
 									"script": {
 										"id": "90634e18-b0ff-4d6b-9fca-2809c4a6d1a2",
 										"exec": [
-											"postman.setNextRequest(null)\r",
+											"postman.setNextRequest('getChildKiddoSaveWalletTransactions')\r",
 											"\r",
 											""
 										],
@@ -2664,7 +2664,7 @@
 									"script": {
 										"id": "7a7b045b-5fe1-44ba-87f9-bf05acde26ba",
 										"exec": [
-											"/**pm.test(\"Response status code is 200\", function () {",
+											"pm.test(\"Response status code is 200\", function () {",
 											"    pm.response.to.have.status(200);",
 											"});",
 											"",
@@ -2688,7 +2688,7 @@
 											"        pm.expect(transaction).to.have.property('parent');",
 											"        pm.expect(transaction).to.have.property('kid_account');",
 											"    });",
-											"});**/"
+											"});"
 										],
 										"type": "text/javascript"
 									}
