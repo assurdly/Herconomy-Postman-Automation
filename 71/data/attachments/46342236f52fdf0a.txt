@@ -1,4 +1,0 @@
-{
-	"email": "sultanassurdly.com",       
-	"password":"Test419$"          
-}
