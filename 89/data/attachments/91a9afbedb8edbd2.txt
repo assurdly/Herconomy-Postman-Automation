@@ -1,0 +1,25 @@
+const jsonData = pm.response.json();
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response is in JSON format", function () {
+    pm.response.to.have.header('Content-Type', 'application/json');
+});
+
+pm.test("Response has status property", function () {
+    pm.expect(pm.response.json()).to.have.property('status');
+});
+
+pm.test("Response has reference property", function () {
+    pm.expect(pm.response.json()).to.have.property('reference');
+});
+
+pm.test("Response has deposit_ref property", function () {
+    pm.expect(pm.response.json()).to.have.property('deposit_ref');
+});
+
+pm.test("Response has message property", function () {
+    pm.expect(pm.response.json()).to.have.property('message');
+});

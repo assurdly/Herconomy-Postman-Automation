@@ -1,0 +1,11 @@
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response is an object with details property", function () {
+    pm.expect(pm.response.json()).to.be.an('object').that.has.property('details');
+});
+
+pm.test("Response time is less than 500ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(500);
+});
