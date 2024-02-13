@@ -1,0 +1,4 @@
+{
+    "paystack_ref":"HERCKID48A2AC59A7E597B106",
+    "kid_account_wallet_id":"c93cc197-e51d-439f-93fc-897549870366"
+}
