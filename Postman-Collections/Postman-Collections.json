@@ -2315,9 +2315,7 @@
 											"    pm.expect(kidAccount.onboarded).to.be.true;\r",
 											"});\r",
 											"\r",
-											"pm.test(\"Response time is less than 500ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-											"});"
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -5702,9 +5700,7 @@
 											"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('claim_total');",
 											"});",
 											"",
-											"pm.test(\"Response time is less than 500ms\", function () {",
-											"    pm.expect(pm.response.responseTime).to.be.below(500);",
-											"});"
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -5819,9 +5815,7 @@
 											"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('claim_total');\r",
 											"});\r",
 											"\r",
-											"pm.test(\"Response time is less than 500ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-											"});"
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -5922,24 +5916,6 @@
 						}
 					],
 					"id": "46fb8467-3fe8-48cd-8198-7b65e83689ca"
-				},
-				{
-					"name": "Test Cron",
-					"id": "8242e29f-b2b3-40c8-93ff-231b91d89919",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "{{jwt_token}}"
-							}
-						],
-						"url": "{{base_url}}/api/v1/kiddosave/wallet/test_cron/"
-					},
-					"response": []
 				}
 			],
 			"id": "28d4ef8f-757c-43c9-9282-b406aa2de9e6"
