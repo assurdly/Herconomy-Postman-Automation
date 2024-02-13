@@ -1,0 +1,1 @@
+{"authorization_url":"https://checkout.paystack.com/gm8hiixebr0ii98","access_code":"gm8hiixebr0ii98","reference":"HERCKIDGO80E01F588616EBBC75"}

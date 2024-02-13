@@ -1,1 +1,0 @@
-postman.setNextRequest('get all kiddo wallets')
