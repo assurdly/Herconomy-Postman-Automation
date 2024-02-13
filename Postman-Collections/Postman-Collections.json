@@ -35,6 +35,16 @@
 										],
 										"type": "text/javascript"
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "5d0403d8-a9ed-4c5e-af77-9211e1d01d8d",
+										"exec": [
+											"pm.environment.set(\"base_url\", \"https://staging.herconomy.com\")"
+										],
+										"type": "text/javascript"
+									}
 								}
 							],
 							"id": "376b382f-183c-4357-9728-be775268b582",
@@ -125,6 +135,9 @@
 											"var token = responseBody.token;\r",
 											"pm.environment.set(\"token\", token);\r",
 											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
 											"pm.test(\"Status code is 200\", function () {\r",
 											"    pm.response.to.have.status(200);\r",
 											"});\r",
