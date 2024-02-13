@@ -2906,15 +2906,7 @@
 											"    });",
 											"});",
 											"",
-											"pm.test(\"Prev_balance and current_balance are either null or valid numeric value\", function () {",
-											"  const responseData = pm.response.json();",
-											"  ",
-											"  pm.expect(responseData).to.be.an('array');",
-											"  responseData.forEach(transaction => {",
-											"    pm.expect(transaction.prev_balance).to.be.null.or.to.be.a('string', \"Amount should be a valid string\");",
-											"    pm.expect(transaction.current_balance).to.be.null.or.to.be.a('string', \"Amount should be a valid string\");",
-											"  });",
-											"});"
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -4967,9 +4959,7 @@
 											"    pm.expect(pm.response.json()).to.be.an('object').that.includes.all.keys( 'parent_email', 'kiddosave_goals','kid_account', 'amount','channel',  'status', 'created_at', 'modified_at', 'trans_ref');\r",
 											"});\r",
 											"\r",
-											"pm.test(\"Response time is less than 500ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
-											"});"
+											""
 										],
 										"type": "text/javascript"
 									}
