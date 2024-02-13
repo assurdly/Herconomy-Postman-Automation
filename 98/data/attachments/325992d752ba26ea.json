@@ -1,0 +1,14 @@
+{
+    "Server": "nginx/1.18.0 (Ubuntu)",
+    "Date": "Tue, 13 Feb 2024 16:02:48 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "4452",
+    "Connection": "keep-alive",
+    "Vary": "Accept, Cookie, Origin",
+    "Allow": "GET, HEAD, OPTIONS",
+    "X-Frame-Options": "DENY",
+    "Expires": "Tue, 13 Feb 2024 16:12:48 GMT",
+    "Cache-Control": "max-age=600",
+    "Strict-Transport-Security": "max-age=60; includeSubDomains; preload",
+    "X-XSS-Protection": "1; mode=block"
+}

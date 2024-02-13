@@ -1,0 +1,5 @@
+{
+    "reference":"HERCKIDDCDF856FECB6203CFC",
+    "the_otp":"123456",
+    "kid_account_wallet_id":"ff70ee37-d2ca-461a-9f3c-80c69fd01d83"
+}

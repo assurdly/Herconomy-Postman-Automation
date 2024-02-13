@@ -1,0 +1,12 @@
+const jsonData = pm.response.json();
+
+pm.test("Status code is 400", function () {
+    pm.response.to.have.status(400);
+});
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("Bad Request");
+});
+pm.test("Error message for wrong ref", function () {
+    pm.expect(jsonData.message[0]).to.eql('Sorry we could not confirm the transaction.');
+    
+});
