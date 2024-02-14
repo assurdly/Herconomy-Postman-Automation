@@ -1,0 +1,25 @@
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response is in JSON format", function () {
+    pm.response.to.have.header('Content-Type', 'application/json');
+});
+
+pm.test("Response contains an array of transactions with specific properties", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.be.an('array');
+    jsonData.forEach(function(transaction) {
+        pm.expect(transaction).to.have.property('id');
+        pm.expect(transaction).to.have.property('trans_type');
+        pm.expect(transaction).to.have.property('amount');
+        pm.expect(transaction).to.have.property('ref');
+        pm.expect(transaction).to.have.property('desc');
+        pm.expect(transaction).to.have.property('prev_balance');
+        pm.expect(transaction).to.have.property('current_balance');
+        pm.expect(transaction).to.have.property('created_at');
+        pm.expect(transaction).to.have.property('modified_at');
+        pm.expect(transaction).to.have.property('parent');
+        pm.expect(transaction).to.have.property('kid_account');
+    });
+});

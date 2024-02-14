@@ -1,0 +1,14 @@
+pm.test("Response status code is 201", function () {
+    pm.response.to.have.status(201);
+});
+
+pm.test("Response is an object with id, kid_account, created_at, modified_at, account_number, and account_bank properties", function () {
+    pm.expect(pm.response.json()).to.be.an('object').that.includes.all.keys('id', 'kid_account', 'created_at', 'modified_at', 'account_number', 'account_bank');
+});
+
+pm.test("kid_account property has specific attributes", function () {
+    var kidAccount = pm.response.json().kid_account;
+    pm.expect(kidAccount).to.be.an('object').that.has.all.keys('id', 'parent_email', 'first_name', 'last_name', 'nickname', 'photo', 'date_of_birth', 'gender', 'onboarded', 'created_at', 'modified_at', 'kyc_status');
+    pm.expect(kidAccount.onboarded).to.be.true;
+});
+
