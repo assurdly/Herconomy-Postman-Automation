@@ -1,0 +1,1 @@
+{"authorization_url":"https://checkout.paystack.com/38up63cmzepxk9w","access_code":"38up63cmzepxk9w","reference":"HERCKIDGO237956631254CF6320"}
