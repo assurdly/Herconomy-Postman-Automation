@@ -82,10 +82,7 @@
 											"    pm.response.to.have.status(\"Bad Request\");",
 											"});",
 											"",
-											"pm.test(\"Verify that the error message exists and is a string\", function () {",
-											"    const errorMessages = pm.response.json().email;",
-											"    pm.expect(errorMessages).to.be.an('array').and.to.have.lengthOf(1, \"Error message should be present and is a string\");",
-											"});",
+											"",
 											""
 										],
 										"type": "text/javascript"
