@@ -1,0 +1,1 @@
+pm.environment.set("base_url", "https://staging.herconomy.com")
