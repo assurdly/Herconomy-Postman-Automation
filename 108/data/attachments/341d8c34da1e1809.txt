@@ -1,0 +1,1 @@
+{"message":["Please wait till your documents are approved before you generate your account number"]}

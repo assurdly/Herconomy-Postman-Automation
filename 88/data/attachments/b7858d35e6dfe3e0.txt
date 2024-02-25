@@ -1,4 +1,0 @@
-{
-    "paystack_ref":"",
-    "kid_account_wallet_id":""
-}

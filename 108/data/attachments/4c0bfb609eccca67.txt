@@ -1,0 +1,13 @@
+var jsonData = pm.response.json()
+pm.test('Response status code is 400', function () {
+    pm.expect(pm.response.code).to.equal(400);
+})
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("Bad Request");
+});
+
+pm.test("Status code name has string", function () {
+    pm.expect(jsonData.message[0]).to.eql('Invalid credentials');
+});
+
+
