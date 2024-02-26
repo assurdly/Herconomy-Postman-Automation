@@ -1,0 +1,8 @@
+pm.test("Response status code is 201", function () {
+    pm.response.to.have.status(201);
+});
+
+pm.test("Response is an object with properties", function () {
+    pm.expect(pm.response.json()).to.be.an('object').that.includes.all.keys( 'parent_email', 'kiddosave_goals','kid_account', 'amount','channel',  'status', 'created_at', 'modified_at', 'trans_ref');
+});
+

@@ -1,0 +1,10 @@
+var jsonData = pm.response.json();
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(400);
+});
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("Bad Request");
+});
+pm.test("Success message is returned", function () {
+   pm.expect(jsonData.message).to.eql("Kiddosave account Kyc already approved")
+});

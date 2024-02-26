@@ -1,0 +1,26 @@
+
+pm.test("Response status code is 400", function () {
+    pm.expect(pm.response.code).to.equal(400);
+});
+
+
+pm.test("Validate the error message structure", function () {
+  const responseData = pm.response.json();
+
+  pm.expect(responseData).to.be.an('object');
+  pm.expect(responseData.message).to.exist.and.to.be.an('object');
+  pm.expect(responseData.message.category).to.exist.and.to.be.an('array');
+  pm.expect(responseData.message.service).to.exist.and.to.be.an('array');
+});
+
+
+pm.test("Category field is required and should be an array", function () {
+    const responseData = pm.response.json();
+    
+    pm.expect(responseData).to.be.an('object');
+    pm.expect(responseData.message).to.exist.and.to.be.an('object');
+    pm.expect(responseData.message.category).to.exist.and.to.be.an('array');
+});
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text("service")).to.include("Inputed service must be one of: ['Airtel', '9Mobile', 'Globacom', 'Mtn', 'Smile', 'Ntel");
+});
