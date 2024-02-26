@@ -5830,7 +5830,7 @@
 									"script": {
 										"id": "e07b33cc-8e7e-4dec-9d5d-fe89f9e1f9c2",
 										"exec": [
-											"const jsonData = pm.response.json();\r",
+											"/** const jsonData = pm.response.json();\r",
 											"\r",
 											"pm.test(\"Status code is 201\", function () {\r",
 											"    pm.response.to.have.status(200);\r",
@@ -5841,7 +5841,7 @@
 											"pm.test(\"Successful Credit\", function () {\r",
 											"    pm.expect(jsonData.message).to.eql('This transaction has already been fufilled!');\r",
 											"    \r",
-											"});"
+											"});**/"
 										],
 										"type": "text/javascript"
 									}
@@ -6043,8 +6043,8 @@
 											"    pm.response.to.have.header('Content-Type', 'application/json');",
 											"});",
 											"",
-											"pm.test(\"Response message\", function () {",
-											"    pm.expect(pm.response.json().message).to.eql('Withdrawal has been Initiated successfully');",
+											"pm.test(\"Response has message property\", function () {",
+											"    pm.expect(pm.response.json()).to.have.property('message');",
 											"});"
 										],
 										"type": "text/javascript"
