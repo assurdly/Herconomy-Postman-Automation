@@ -1,0 +1,111 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Feb 26 11:13:18 GMT 2024","Mon Feb 26 11:13:40 GMT 2024","21517","Kiddosave","Deposit","","","","Generate Nuban",""
+"passed","Mon Feb 26 11:14:13 GMT 2024","Mon Feb 26 11:14:15 GMT 2024","2691","Kiddosave","Kiddosave goals","","","","BREAK KIDDOSAVE GOALS",""
+"failed","Mon Feb 26 11:13:03 GMT 2024","Mon Feb 26 11:13:07 GMT 2024","4100","Data","","","","","Data Purchase(Globacom)",""
+"passed","Mon Feb 26 11:13:58 GMT 2024","Mon Feb 26 11:14:00 GMT 2024","2026","Kiddosave","Kiddosave goals","","","","UPDATE GOALS",""
+"passed","Mon Feb 26 11:14:17 GMT 2024","Mon Feb 26 11:14:19 GMT 2024","1569","Kiddosave","Wallet Interest","","","","Get Interest Balance",""
+"passed","Mon Feb 26 11:13:51 GMT 2024","Mon Feb 26 11:13:52 GMT 2024","1475","Kiddosave","Deposit","","","","getChildKiddoSaveWalletTransactions",""
+"passed","Mon Feb 26 11:12:41 GMT 2024","Mon Feb 26 11:12:41 GMT 2024","31","Data","","","","","Get Data Plans (Ntel)",""
+"passed","Mon Feb 26 11:14:08 GMT 2024","Mon Feb 26 11:14:10 GMT 2024","1708","Kiddosave","Kiddosave goals","","","","CONFIRMATION FOR ADDING FUNDS WITH NEW CARD",""
+"failed","Mon Feb 26 11:12:55 GMT 2024","Mon Feb 26 11:12:59 GMT 2024","4028","Data","","","","","Data Purchase(Airtel)",""
+"passed","Mon Feb 26 11:12:41 GMT 2024","Mon Feb 26 11:12:41 GMT 2024","31","Data","","","","","Product Id (Airtel)",""
+"passed","Mon Feb 26 11:12:42 GMT 2024","Mon Feb 26 11:12:46 GMT 2024","4090","Data","","","","","Data Purchase(Empty product id)",""
+"passed","Mon Feb 26 11:13:55 GMT 2024","Mon Feb 26 11:13:57 GMT 2024","1824","Kiddosave","Withdraw to float","","","","withdraw",""
+"passed","Mon Feb 26 11:13:17 GMT 2024","Mon Feb 26 11:13:18 GMT 2024","1349","Kiddosave","Deposit","","","","Generate Nuban- Invalid Wallet Id",""
+"passed","Mon Feb 26 11:13:53 GMT 2024","Mon Feb 26 11:13:53 GMT 2024","39","Kiddosave","Deposit","","","","getUserKiddoSaveWalletTransactions",""
+"passed","Mon Feb 26 11:13:46 GMT 2024","Mon Feb 26 11:13:47 GMT 2024","1552","Kiddosave","Deposit","","","","mob InitializeKiddo NewCardQuickSave",""
+"passed","Mon Feb 26 11:12:41 GMT 2024","Mon Feb 26 11:12:41 GMT 2024","32","Data","","","","","Product Id (Globacom)",""
+"passed","Mon Feb 26 11:13:10 GMT 2024","Mon Feb 26 11:13:12 GMT 2024","1508","Kiddosave","Onboarding","","","","Create Kid Account-  Kid Limit","## Created Kiddosave Account (Authentication Required in the endpoint Headers)
+
+Request body fields:
+
+- first_name(Required): The first name of the child account that is being created.
+- last_name(Required): The Last name of the child account that is being created.
+- nickname(Optional): The Nick name of the child account that is being created.
+- date_of_birth(Required): The date of birth of the child account that is being created. The age calculated from the date of birth provided must be 17 or below.
+    
+- gender(Required): The gender of the child account that is being created. Choice of gender is (male or female)"
+"passed","Mon Feb 26 11:13:42 GMT 2024","Mon Feb 26 11:13:46 GMT 2024","3391","Kiddosave","Deposit","","","","add_funds_with_parent_float",""
+"passed","Mon Feb 26 11:12:40 GMT 2024","Mon Feb 26 11:12:41 GMT 2024","35","Data","","","","","Product Id(MTN)",""
+"failed","Mon Feb 26 11:13:15 GMT 2024","Mon Feb 26 11:13:17 GMT 2024","1699","Kiddosave","Onboarding","","","","Verify Kid document- Already verified document","## Verify Kid Document(Authorization Required).
+
+Fields required.
+
+- kid_account_id(Required): The ID of the kid account the document is tied to.
+    
+- document_type: The type of the verification document. choices for this field (passport, national_id, birth_certificate)
+    
+- id_unique_number(Required): Identification number. For NIN- the identification number is Vnin(Virtual NIN), for Passport - the identification Number, for the birth certificate the base64 for the birth certificate pdf."
+"passed","Mon Feb 26 11:13:47 GMT 2024","Mon Feb 26 11:13:49 GMT 2024","1705","Kiddosave","Deposit","","","","comfirmKiddoNewCardQuickSave- Wrong Ref",""
+"passed","Mon Feb 26 11:13:58 GMT 2024","Mon Feb 26 11:13:58 GMT 2024","31","Kiddosave","Kiddosave goals","","","","Get all kiddosave goals",""
+"passed","Mon Feb 26 11:14:19 GMT 2024","Mon Feb 26 11:14:20 GMT 2024","1700","Kiddosave","Wallet Interest","","","","GetKiddoClaimInterest AmountTotal",""
+"passed","Mon Feb 26 11:12:50 GMT 2024","Mon Feb 26 11:12:51 GMT 2024","1261","Data","","","","","Data Purchase(Empty amount)",""
+"passed","Mon Feb 26 11:13:40 GMT 2024","Mon Feb 26 11:13:42 GMT 2024","2499","Kiddosave","Deposit","","","","get_kiddo_wallet_details",""
+"passed","Mon Feb 26 11:13:49 GMT 2024","Mon Feb 26 11:13:51 GMT 2024","1674","Kiddosave","Deposit","","","","comfirmKiddoNewCardQuickSave",""
+"passed","Mon Feb 26 11:13:09 GMT 2024","Mon Feb 26 11:13:10 GMT 2024","1511","Kiddosave","Onboarding","","","","Create Kid Account- Over Aged","## Created Kiddosave Account (Authentication Required in the endpoint Headers)
+
+Request body fields:
+
+- first_name(Required): The first name of the child account that is being created.
+- last_name(Required): The Last name of the child account that is being created.
+- nickname(Optional): The Nick name of the child account that is being created.
+- date_of_birth(Required): The date of birth of the child account that is being created. The age calculated from the date of birth provided must be 17 or below.
+    
+- gender(Required): The gender of the child account that is being created. Choice of gender is (male or female)"
+"passed","Mon Feb 26 11:13:07 GMT 2024","Mon Feb 26 11:13:09 GMT 2024","1487","Kiddosave","Onboarding","","","","Create Kid Account- Blank form","## Created Kiddosave Account (Authentication Required in the endpoint Headers)
+
+Request body fields:
+
+- first_name(Required): The first name of the child account that is being created.
+- last_name(Required): The Last name of the child account that is being created.
+- nickname(Optional): The Nick name of the child account that is being created.
+- date_of_birth(Required): The date of birth of the child account that is being created. The age calculated from the date of birth provided must be 17 or below.
+    
+- gender(Required): The gender of the child account that is being created. Choice of gender is (male or female)"
+"passed","Mon Feb 26 11:12:35 GMT 2024","Mon Feb 26 11:12:40 GMT 2024","5835","Authentication","Login","","","","Login - Valid Email",""
+"failed","Mon Feb 26 11:13:57 GMT 2024","Mon Feb 26 11:13:58 GMT 2024","1717","Kiddosave","Kiddosave goals","","","","CREATE GOAL",""
+"passed","Mon Feb 26 11:14:10 GMT 2024","Mon Feb 26 11:14:13 GMT 2024","2603","Kiddosave","Kiddosave goals","","","","FLOAT ADD FUNDS",""
+"failed","Mon Feb 26 11:13:12 GMT 2024","Mon Feb 26 11:13:13 GMT 2024","1505","Kiddosave","Onboarding","","","","Create Kid Account","## Created Kiddosave Account (Authentication Required in the endpoint Headers)
+
+Request body fields:
+
+- first_name(Required): The first name of the child account that is being created.
+- last_name(Required): The Last name of the child account that is being created.
+- nickname(Optional): The Nick name of the child account that is being created.
+- date_of_birth(Required): The date of birth of the child account that is being created. The age calculated from the date of birth provided must be 17 or below.
+    
+- gender(Required): The gender of the child account that is being created. Choice of gender is (male or female)"
+"passed","Mon Feb 26 11:13:53 GMT 2024","Mon Feb 26 11:13:55 GMT 2024","1364","Kiddosave","Deposit","","","","VerifyOTP mob_confirm_kiddo_new_card_funding",""
+"passed","Mon Feb 26 11:14:20 GMT 2024","Mon Feb 26 11:14:22 GMT 2024","1670","Kiddosave","Wallet Interest","","","","GetKiddosave LastMonthBreakdown",""
+"passed","Mon Feb 26 11:14:15 GMT 2024","Mon Feb 26 11:14:17 GMT 2024","1566","Kiddosave","Wallet Interest","","","","Claim Interest",""
+"passed","Mon Feb 26 11:12:32 GMT 2024","Mon Feb 26 11:12:33 GMT 2024","817","Authentication","Login","","","","Login - Invalid Email",""
+"passed","Mon Feb 26 11:12:41 GMT 2024","Mon Feb 26 11:12:41 GMT 2024","33","Data","","","","","Product Id (9 Mobile)",""
+"passed","Mon Feb 26 11:14:00 GMT 2024","Mon Feb 26 11:14:02 GMT 2024","1988","Kiddosave","Kiddosave goals","","","","MOBILE QUICKSAVE",""
+"passed","Mon Feb 26 11:12:41 GMT 2024","Mon Feb 26 11:12:42 GMT 2024","1251","Data","","","","","Get Data Plans (invalid service)",""
+"passed","Mon Feb 26 11:12:49 GMT 2024","Mon Feb 26 11:12:50 GMT 2024","1253","Data","","","","","Data Purchase(Empty service)",""
+"passed","Mon Feb 26 11:13:17 GMT 2024","Mon Feb 26 11:13:17 GMT 2024","28","Kiddosave","Deposit","","","","get_all_child_balance","
+This endpoint makes an HTTP GET request to retrieve the total balance for all children in the KiddoSave wallet. The response will be in JSON format with the total balance as the key-value pair. 
+
+The last execution of this request returned a status code of 200, indicating a successful response, and the content type was application/json. The response body contained the total balance as 0.
+
+"
+"passed","Mon Feb 26 11:14:02 GMT 2024","Mon Feb 26 11:14:04 GMT 2024","2046","Kiddosave","Kiddosave goals","","","","CONFIRM MOB QUICKSAVE- Wrong Ref",""
+"passed","Mon Feb 26 11:12:46 GMT 2024","Mon Feb 26 11:12:47 GMT 2024","1244","Data","","","","","Data Purchase(Empty phone)",""
+"passed","Mon Feb 26 11:13:17 GMT 2024","Mon Feb 26 11:13:17 GMT 2024","30","Kiddosave","Deposit","","","","get all kiddo wallets",""
+"passed","Mon Feb 26 11:12:33 GMT 2024","Mon Feb 26 11:12:35 GMT 2024","1906","Authentication","Login","","","","Login - Invalid Password",""
+"passed","Mon Feb 26 11:14:15 GMT 2024","Mon Feb 26 11:14:15 GMT 2024","23","Kiddosave","Kiddosave goals","","","","GET  KIDDO GOALS TRANS",""
+"passed","Mon Feb 26 11:13:52 GMT 2024","Mon Feb 26 11:13:53 GMT 2024","1257","Kiddosave","Deposit","","","","create_kiddo_saved_card_funding",""
+"passed","Mon Feb 26 11:12:47 GMT 2024","Mon Feb 26 11:12:49 GMT 2024","1239","Data","","","","","Data Purchase(Empty category)",""
+"failed","Mon Feb 26 11:12:51 GMT 2024","Mon Feb 26 11:12:55 GMT 2024","4161","Data","","","","","Data Purchase(MTN)",""
+"passed","Mon Feb 26 11:14:04 GMT 2024","Mon Feb 26 11:14:08 GMT 2024","3854","Kiddosave","Kiddosave goals","","","","ADD FUNDS TO KIDDOSAVE GOALS WITH CARD",""
+"failed","Mon Feb 26 11:12:59 GMT 2024","Mon Feb 26 11:13:03 GMT 2024","4141","Data","","","","","Data Purchase(9 Mobile)",""
+"broken","Mon Feb 26 11:12:41 GMT 2024","Mon Feb 26 11:12:41 GMT 2024","23","Data","","","","","Get Data Plans (Smile)",""
+"failed","Mon Feb 26 11:13:13 GMT 2024","Mon Feb 26 11:13:15 GMT 2024","1714","Kiddosave","Onboarding","","","","Verify Kid document","## Verify Kid Document(Authorization Required).
+
+Fields required.
+
+- kid_account_id(Required): The ID of the kid account the document is tied to.
+    
+- document_type: The type of the verification document. choices for this field (passport, national_id, birth_certificate)
+    
+- id_unique_number(Required): Identification number. For NIN- the identification number is Vnin(Virtual NIN), for Passport - the identification Number, for the birth certificate the base64 for the birth certificate pdf."
