@@ -1,0 +1,1 @@
+{"authorization_url":"https://checkout.paystack.com/a0a1n4qx7i4fisy","access_code":"a0a1n4qx7i4fisy","reference":"HERCKIDGO60A2A8090BE15AB553"}

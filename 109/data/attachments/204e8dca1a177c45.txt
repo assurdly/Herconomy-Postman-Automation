@@ -1,0 +1,1 @@
+{"message":["kid wallet does not exist"]}
