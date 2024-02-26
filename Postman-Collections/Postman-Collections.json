@@ -2335,7 +2335,7 @@
 											"    pm.response.to.have.status(\"OK\");\r",
 											"});\r",
 											"pm.test(\"Success message is returned\", function () {\r",
-											"   pm.expect(jsonData.message).to.eql(\"Account successfully verified\")\r",
+											"   pm.expect(jsonData.message).to.eql(\"Document successfully verified\")\r",
 											"});\r",
 											""
 										],
@@ -2369,7 +2369,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"kid_account_id\": \"{{kidAccountId}}\",\n    \"status\": \"approved\"\n}",
+									"raw": "{\n    \"kid_account_id\": \"19a4b382-1979-4eac-a023-f950c1a929d9\",\n    \"status\": \"approved\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2532,6 +2532,290 @@
 								},
 								{
 									"id": "f7e70078-b23c-4083-9b8c-8414f9ec9cdd",
+									"name": "success - rejected",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{jwt_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"kid_account_id\": \"10970e25-2e8a-41fd-8470-2fe1203007cd\",\n    \"status\": \"rejected\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/api/v1/kiddosave/authentication/verify_kiddo_kyc_document/"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 04 Jan 2024 11:58:37 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.7"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie, Origin"
+										},
+										{
+											"key": "Allow",
+											"value": "PUT, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": [\n        \"Document Verification successfully rejected\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Verify Kid document- Already verified document",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c31f0496-0483-48be-818f-f786033fe22e",
+										"exec": [
+											"var jsonData = pm.response.json();\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"OK\");\r",
+											"});\r",
+											"pm.test(\"Success message is returned\", function () {\r",
+											"   pm.expect(jsonData.message).to.eql(\"Document successfully verified\")\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "bbab0dfa-53d7-4cec-ad9e-701f9619247c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "jwt",
+									"jwt": {
+										"algorithm": "HS256",
+										"isSecretBase64Encoded": false,
+										"payload": "{}",
+										"addTokenTo": "header",
+										"headerPrefix": "Bearer",
+										"queryParamKey": "token",
+										"header": "{}"
+									}
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"kid_account_id\": \"19a4b382-1979-4eac-a023-f950c1a929d9\",\n    \"status\": \"approved\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/api/v1/kiddosave/authentication/verify_kiddo_kyc_document/",
+								"description": "## Verify Kid Document(Authorization Required).\n\nFields required.\n\n- kid_account_id(Required): The ID of the kid account the document is tied to.\n    \n- document_type: The type of the verification document. choices for this field (passport, national_id, birth_certificate)\n    \n- id_unique_number(Required): Identification number. For NIN- the identification number is Vnin(Virtual NIN), for Passport - the identification Number, for the birth certificate the base64 for the birth certificate pdf."
+							},
+							"response": [
+								{
+									"id": "879e1888-1f28-4a87-90b8-df51626c2f53",
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{jwt_token}}"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"kid_account_id\": \"10970e25-2e8a-41fd-8470-2fe1203007cd\",\n    \"status\": \"approved\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/api/v1/kiddosave/authentication/verify_kiddo_kyc_document/"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.18.0 (Ubuntu)"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Aug 2023 14:47:55 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "43"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie, Origin"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": \"Account successfully verified\"\n}"
+								},
+								{
+									"id": "917db426-54b2-49ed-9bb5-781f6c40893a",
+									"name": "error-already approved",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{live_jwt_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"kid_account_id\": \"b04ebb36-ce7a-4b29-bbad-b40e681dad0c\",\n    \"status\": \"approved\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{live_base_url}}/api/v1/kiddosave/authentication/verify_kiddo_kyc_document/"
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.18.0 (Ubuntu)"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 13 Dec 2023 11:20:03 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "54"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie, Origin"
+										},
+										{
+											"key": "Allow",
+											"value": "PUT, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=60; includeSubDomains; preload"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"message\": [\n        \"Kiddosave account Kyc already approved\"\n    ]\n}"
+								},
+								{
+									"id": "05f80df0-ded9-487c-873f-d7728e4eba0d",
 									"name": "success - rejected",
 									"originalRequest": {
 										"method": "PUT",
