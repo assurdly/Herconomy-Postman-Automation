@@ -3627,6 +3627,125 @@
 							]
 						},
 						{
+							"name": "get_kiddo_wallet_details - Empty walletId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "14d957a6-86cc-4940-9a64-52f30cf55659",
+										"exec": [
+											"var jsonData = pm.response.json();\r",
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response is a valid JSON object\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Blank wallet id message is returned\", function () {\r",
+											"   pm.expect(jsonData.message).to.eql(\"wallet id is required\")\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "8e08822d-1664-423b-9756-b1fd1e37a655",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"wallet_id\":\"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/api/v1/kiddosave/wallet/get_kiddo_wallet_details/"
+							},
+							"response": [
+								{
+									"id": "badb4e2f-c8ab-4a40-98f6-0932b8db2ff6",
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{jwt_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"wallet_id\":\"c93cc197-e51d-439f-93fc-897549870366\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/api/v1/kiddosave/wallet/get_kiddo_wallet_details/"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 27 Nov 2023 15:19:05 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.7"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie, Origin"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "835"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"c93cc197-e51d-439f-93fc-897549870366\",\n    \"kid_account\": {\n        \"id\": \"d83de287-60d6-4273-9a8c-caad91843488\",\n        \"parent_email\": \"ugokingsley5@gmail.com\",\n        \"first_name\": \"Test\",\n        \"last_name\": \"Testlast\",\n        \"nickname\": \"testugo\",\n        \"photo\": \"https://ags-live-media-files.s3.amazonaws.com/child_nickname/testugo/upload231122_103823.jpeg?AWSAccessKeyId=AKIAUPDYUWDZBGWI5253&Signature=tiJOQrg72GgIWIOWQfPwJNNMgIc%3D&Expires=1701101944\",\n        \"date_of_birth\": \"2010-09-12\",\n        \"gender\": \"male\",\n        \"onboarded\": true,\n        \"created_at\": \"2023-11-20T12:40:17.411780Z\",\n        \"modified_at\": \"2023-11-20T12:40:17.411863Z\",\n        \"kyc_status\": \"pending\"\n    },\n    \"balance\": \"3304.90\",\n    \"ref_code\": \"user-float-5473c89b05df54d83de287-60d6-4273-9a8c-caad91843488\",\n    \"active\": false,\n    \"created_at\": \"2023-11-20T12:40:18.243094Z\",\n    \"modified_at\": \"2023-11-27T13:44:01.820013Z\",\n    \"account_number\": \"9160299633\",\n    \"account_bank\": \"Wema bank\"\n}"
+								}
+							]
+						},
+						{
 							"name": "add_funds_with_parent_float",
 							"event": [
 								{
@@ -3680,6 +3799,131 @@
 							"response": [
 								{
 									"id": "7eb7f35a-1817-4dbc-b29a-490413fa69f4",
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{jwt_token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"amount\":150,\n    \"kid_account_wallet_id\":\"ff70ee37-d2ca-461a-9f3c-80c69fd01d83\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{staging_base_url}}/api/v1/kiddosave/wallet/add_funds_with_parent_float/"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.18.0 (Ubuntu)"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 28 Nov 2023 08:21:51 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "515"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie, Origin"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=60; includeSubDomains; preload"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"9434ea72-d9ef-4c7b-a10f-6577c3ac3300\",\n    \"kid_account\": {\n        \"id\": \"10970e25-2e8a-41fd-8470-2fe1203007cd\",\n        \"parent_email\": \"ugokingsley5@gmail.com\",\n        \"first_name\": \"Test\",\n        \"last_name\": \"Test\",\n        \"nickname\": \"testugo\",\n        \"photo\": null,\n        \"date_of_birth\": \"2010-09-12\",\n        \"gender\": \"male\",\n        \"onboarded\": false,\n        \"created_at\": \"2023-11-20T12:10:48.907366Z\",\n        \"modified_at\": \"2023-11-20T12:10:48.907449Z\",\n        \"kyc_status\": null\n    },\n    \"created_at\": \"2023-11-28T09:21:51.318384Z\",\n    \"modified_at\": \"2023-11-28T09:21:51.334597Z\",\n    \"account_number\": null,\n    \"account_bank\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "add_funds_with_parent_float Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "27221765-358a-46cd-8237-203f802c5e19",
+										"exec": [
+											"pm.test(\"Response status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response is an object with id, kid_account, created_at, modified_at, account_number, and account_bank properties\", function () {\r",
+											"    pm.expect(pm.response.json()).to.be.an('object').that.includes.all.keys('id', 'kid_account', 'created_at', 'modified_at', 'account_number', 'account_bank');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"kid_account property has specific attributes\", function () {\r",
+											"    var kidAccount = pm.response.json().kid_account;\r",
+											"    pm.expect(kidAccount).to.be.an('object').that.has.all.keys('id', 'parent_email', 'first_name', 'last_name', 'nickname', 'photo', 'date_of_birth', 'gender', 'onboarded', 'created_at', 'modified_at', 'kyc_status');\r",
+											"    pm.expect(kidAccount.onboarded).to.be.true;\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "a63cfcf0-a883-45d6-be28-d6acaad1c967",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\":150,\n    \"kid_account_wallet_id\":\"{{kidWalletId}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/api/v1/kiddosave/wallet/add_funds_with_parent_float/"
+							},
+							"response": [
+								{
+									"id": "63055bca-2675-43e8-baca-ddac7933e72e",
 									"name": "success",
 									"originalRequest": {
 										"method": "POST",
