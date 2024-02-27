@@ -1807,6 +1807,558 @@
 			"id": "f5e03218-1bd4-4ff6-bfd9-73ca64523cfd"
 		},
 		{
+			"name": "Airtime",
+			"item": [
+				{
+					"name": "Airtime Purchase -(Empty Phone)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6330d910-e063-4c14-9d1a-6416a5fa18b1",
+								"exec": [
+									"var resp = JSON.parse(responseBody);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"pm.test(\"Empty phone error message returned\", function () {\r",
+									"   pm.expect(resp.message.phone[0]).to.eql(\"Inputed phone cannot be empty\")\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "a6fe7505-cd4b-4d5b-ad47-f3ef2d4d8b16",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": \"200\",\r\n    \"service\": \"9Mobile\",\r\n    \"category\": \"Airtime\",\r\n    \"phone\": \"\",\r\n    \"password\": \"Test419$\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/billspay/airtime/"
+					},
+					"response": []
+				},
+				{
+					"name": "Airtime Purchase -(Empty Amount)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6330d910-e063-4c14-9d1a-6416a5fa18b1",
+								"exec": [
+									"var resp = JSON.parse(responseBody);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"pm.test(\"Empty amount error message returned\", function () {\r",
+									"   pm.expect(resp.message.amount[0]).to.eql(\"Inputed amount cannot be empty\")\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "2fc28f4a-41e8-4f4a-8960-86325769763e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": \"\",\r\n    \"service\": \"9Mobile\",\r\n    \"category\": \"Airtime\",\r\n    \"phone\": \"08173106732\",\r\n    \"password\": \"Test419$\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/billspay/airtime/"
+					},
+					"response": []
+				},
+				{
+					"name": "Airtime Purchase -(Empty Service)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6330d910-e063-4c14-9d1a-6416a5fa18b1",
+								"exec": [
+									"var resp = JSON.parse(responseBody);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"pm.test(\"Empty service error message returned\", function () {\r",
+									"   pm.expect(resp.message.service[0]).to.eql(\"Inputed service cannot be empty\")\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "0e331a54-663c-4610-a337-4abb82fd4ae5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": \"200\",\r\n    \"service\": \"\",\r\n    \"category\": \"Airtime\",\r\n    \"phone\": \"08173106732\",\r\n    \"password\": \"Test419$\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/billspay/airtime/"
+					},
+					"response": []
+				},
+				{
+					"name": "Airtime Purchase -(Empty Category)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6330d910-e063-4c14-9d1a-6416a5fa18b1",
+								"exec": [
+									"var resp = JSON.parse(responseBody);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"pm.test(\"Empty category error message returned\", function () {\r",
+									"   pm.expect(resp.message.category[0]).to.eql(\"Inputed category cannot be empty\")\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "0cadeb34-91e6-44e4-bf9f-f117e3354be6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": \"200\",\r\n    \"service\": \"9Mobile\",\r\n    \"category\": \"\",\r\n    \"phone\": \"08173106732\",\r\n    \"password\": \"Test419$\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/billspay/airtime/"
+					},
+					"response": []
+				},
+				{
+					"name": "Airtime Purchase -(Low Balance)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6330d910-e063-4c14-9d1a-6416a5fa18b1",
+								"exec": [
+									"/* var resp = JSON.parse(responseBody);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"pm.test(\"Low balance error message returned\", function () {\r",
+									"   pm.expect(resp.message.message).to.eql(\"Low Balance\")\r",
+									"})*/"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "0945f9d0-973c-4dbd-a38c-16a8eaa98ed7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": \"100\",\r\n    \"service\": \"9Mobile\",\r\n    \"category\": \"Airtime\",\r\n    \"phone\": \"08173106732\",\r\n    \"password\": \"Test419$\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/billspay/airtime/"
+					},
+					"response": []
+				},
+				{
+					"name": "Airtime Purchase -(9 Mobile Sucessful)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6330d910-e063-4c14-9d1a-6416a5fa18b1",
+								"exec": [
+									"var resp = JSON.parse(responseBody);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"pm.test(\"Success message is returned\", function () {\r",
+									"    pm.expect(resp.response_message).to.to.be.oneOf([\"Success\", \"Successful\" , \"\"])\r",
+									"})\r",
+									"pm.test(\"Id is a non-empty string\", function () {\r",
+									"    pm.expect(resp.id).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"An object is returned\", function () {\r",
+									"    pm.expect(resp).to.be.an('object');\r",
+									"    \r",
+									"});\r",
+									"\r",
+									"pm.test(\"Service is a valid service code\", function () {\r",
+									"    pm.expect(resp).to.be.an('object');\r",
+									"    pm.expect(resp.service).to.be.a('number').and.to.be.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], \"Invalid service code\");\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "ddfa9385-01a4-45de-ae8a-59d6b0491e91",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": \"100\",\r\n    \"service\": \"9Mobile\",\r\n    \"category\": \"Airtime\",\r\n    \"phone\": \"08173106732\",\r\n    \"password\": \"Test419$\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/billspay/airtime/"
+					},
+					"response": []
+				},
+				{
+					"name": "Airtime Purchase -(MTN Sucessful)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6330d910-e063-4c14-9d1a-6416a5fa18b1",
+								"exec": [
+									"var resp = JSON.parse(responseBody);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"pm.test(\"Success message is returned\", function () {\r",
+									"    pm.expect(resp.response_message).to.to.be.oneOf([\"Success\", \"Successful\" , \"\"])\r",
+									"})\r",
+									"pm.test(\"Id is a non-empty string\", function () {\r",
+									"    pm.expect(resp.id).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"An object is returned\", function () {\r",
+									"    pm.expect(resp).to.be.an('object');\r",
+									"    \r",
+									"});\r",
+									"\r",
+									"pm.test(\"Service is a valid service code\", function () {\r",
+									"    pm.expect(resp).to.be.an('object');\r",
+									"    pm.expect(resp.service).to.be.a('number').and.to.be.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], \"Invalid service code\");\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "3fb21fc4-2577-46d6-b5b1-0e1b35fd0e21",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": \"100\",\r\n    \"service\": \"Mtn\",\r\n    \"category\": \"Airtime\",\r\n    \"phone\": \"09030863921\",\r\n    \"password\": \"Test419$\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/billspay/airtime/"
+					},
+					"response": []
+				},
+				{
+					"name": "Airtime Purchase -(Airtel Sucessful)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6330d910-e063-4c14-9d1a-6416a5fa18b1",
+								"exec": [
+									"var resp = JSON.parse(responseBody);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"pm.test(\"Success message is returned\", function () {\r",
+									"    pm.expect(resp.response_message).to.to.be.oneOf([\"Success\", \"Successful\" , \"\"])\r",
+									"})\r",
+									"pm.test(\"Id is a non-empty string\", function () {\r",
+									"    pm.expect(resp.id).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"An object is returned\", function () {\r",
+									"    pm.expect(resp).to.be.an('object');\r",
+									"    \r",
+									"});\r",
+									"\r",
+									"pm.test(\"Service is a valid service code\", function () {\r",
+									"    pm.expect(resp).to.be.an('object');\r",
+									"    pm.expect(resp.service).to.be.a('number').and.to.be.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], \"Invalid service code\");\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "45e97be7-105d-430b-abe6-1680b090f1da",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": \"100\",\r\n    \"service\": \"Airtel\",\r\n    \"category\": \"Airtime\",\r\n    \"phone\": \"07088577290\",\r\n    \"password\": \"Test419$\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/billspay/airtime/"
+					},
+					"response": []
+				},
+				{
+					"name": "Airtime Purchase -(Globacom Sucessful)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6330d910-e063-4c14-9d1a-6416a5fa18b1",
+								"exec": [
+									"var resp = JSON.parse(responseBody);\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"pm.test(\"Success message is returned\", function () {\r",
+									"    pm.expect(resp.response_message).to.to.be.oneOf([\"Success\", \"Successful\" , \"\"])\r",
+									"})\r",
+									"pm.test(\"Id is a non-empty string\", function () {\r",
+									"    pm.expect(resp.id).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"An object is returned\", function () {\r",
+									"    pm.expect(resp).to.be.an('object');\r",
+									"    \r",
+									"});\r",
+									"\r",
+									"pm.test(\"Service is a valid service code\", function () {\r",
+									"    pm.expect(resp).to.be.an('object');\r",
+									"    pm.expect(resp.service).to.be.a('number').and.to.be.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], \"Invalid service code\");\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "2747490b-d7c0-4648-afd5-5656226c56aa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": \"100\",\r\n    \"service\": \"Globacom\",\r\n    \"category\": \"Airtime\",\r\n    \"phone\": \"08054726044\",\r\n    \"password\": \"Test419$\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/v1/billspay/airtime/"
+					},
+					"response": []
+				}
+			],
+			"id": "25795a1a-02ff-4ef6-a86d-462f0093f221"
+		},
+		{
 			"name": "Kiddosave",
 			"item": [
 				{
