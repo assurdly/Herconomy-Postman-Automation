@@ -1,0 +1,1 @@
+{"authorization_url":"https://checkout.paystack.com/xiwi4qi58kypckg","access_code":"xiwi4qi58kypckg","reference":"HERCKID5D1B80401410B8DC85"}

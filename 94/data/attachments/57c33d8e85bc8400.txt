@@ -1,3 +1,0 @@
-{
-    "kid_account_wallet_id":"" 
-}

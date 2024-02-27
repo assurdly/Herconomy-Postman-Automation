@@ -1,0 +1,10 @@
+{
+    "amount": "100",
+    "service": "Airtel",
+    "category": "Data",
+    "phone": "08080397493",
+    "product_id": "AIR-100MB-2",
+    "password": "Test419$"
+}
+
+
