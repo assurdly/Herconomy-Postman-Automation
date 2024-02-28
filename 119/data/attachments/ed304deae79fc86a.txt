@@ -1,0 +1,10 @@
+{
+    "amount": "200",
+    "service": "",
+    "category": "Data",
+    "phone": "09030863921",
+    "product_id": "MTN-75MB-1",
+    "password": "Test419$"
+}
+
+

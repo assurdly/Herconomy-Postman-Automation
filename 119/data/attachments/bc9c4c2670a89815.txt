@@ -1,0 +1,26 @@
+var resp = JSON.parse(responseBody);
+
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("OK");
+});
+pm.test("Success message is returned", function () {
+    pm.expect(resp.response_message).to.to.be.oneOf(["Success", "Successful" , ""])
+})
+pm.test("Id is a non-empty string", function () {
+    pm.expect(resp.id).to.be.a('string').and.to.have.lengthOf.at.least(1, "Value should not be empty");
+});
+
+pm.test("An object is returned", function () {
+    pm.expect(resp).to.be.an('object');
+    
+});
+
+pm.test("Service is a valid service code", function () {
+    pm.expect(resp).to.be.an('object');
+    pm.expect(resp.service).to.be.a('number').and.to.be.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], "Invalid service code");
+})
+

@@ -1,0 +1,10 @@
+{
+    "amount": "200",
+    "service": "Mtn",
+    "category": "Data",
+    "phone": "",
+    "product_id": "MTN-75MB-1",
+    "password": "Test419$"
+}
+
+
