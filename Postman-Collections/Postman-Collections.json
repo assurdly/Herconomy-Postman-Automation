@@ -7399,10 +7399,16 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token}}",
+										"type": "text"
+									}
+								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"amount\": \"\",\n    \"kiddosave_goal_id\": \"\"\n}",
+									"raw": "{\n    \"amount\": \"50\",\n    \"kiddosave_goal_id\": \"{{kidGoalId}}\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
