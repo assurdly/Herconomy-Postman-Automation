@@ -7399,7 +7399,17 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": \"\",\n    \"kiddosave_goal_id\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://staging.herconomy.com/api/v1/kiddosave/goals/add_funds_with_kiddo_wallet/"
 							},
 							"response": []
 						}
