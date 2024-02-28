@@ -1,0 +1,9 @@
+{
+    "amount": "200",
+    "service": "",
+    "category": "Airtime",
+    "phone": "08173106732",
+    "password": "Test419$"
+}
+
+

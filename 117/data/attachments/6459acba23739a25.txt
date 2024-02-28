@@ -1,0 +1,1 @@
+{"status":200,"reference":"HERCKIDGO2024022879F4C462E4284E2983","deposit_ref":"HERCKIDGO2024022879F4C462E4284E2983","message":"Charge Attempted, Please provide OTP"}

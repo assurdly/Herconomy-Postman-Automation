@@ -1,0 +1,9 @@
+{
+    "amount": "200",
+    "service": "9Mobile",
+    "category": "Airtime",
+    "phone": "",
+    "password": "Test419$"
+}
+
+

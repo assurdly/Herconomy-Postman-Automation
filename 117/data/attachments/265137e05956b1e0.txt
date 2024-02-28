@@ -1,0 +1,22 @@
+pm.test(" Product_Id_value", function () {
+    var jsonData = pm.response.json();
+    pm.collectionVariables.set("airtel_id", jsonData.packages[1].id);    
+}); 
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("OK")
+});
+pm.test("Response has the required fields", function () {
+    const responseData = pm.response.json();
+
+    pm.expect(responseData).to.be.an('object');
+    pm.expect(responseData.status_code).to.exist.and.to.be.a('string');
+    pm.expect(responseData.service_name).to.exist.and.to.be.a('string');
+    pm.expect(responseData.packages).to.exist.and.to.be.an('array');
+    pm.expect(responseData.other_json).to.exist.and.to.be.an('object');
+})
+
+
+
