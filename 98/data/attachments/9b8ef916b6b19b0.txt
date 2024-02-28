@@ -1,1 +1,0 @@
-{"parent_email":"sultan@assurdly.com","kiddosave_goals":"6396d010-c3f8-44e1-bed0-c225f4891f02","kid_account":"af1fbafd-b263-4c12-a414-0957cf043d96","amount":"20.00","channel":"wallet","status":"success","trans_ref":"HERCKIDGO20240213A4C78977CC07ADC491","created_at":"2024-02-13T17:02:39.839834Z","modified_at":"2024-02-13T17:02:39.839860Z"}

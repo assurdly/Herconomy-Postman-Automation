@@ -1,4 +1,0 @@
-{
-    "amount":150,
-    "kid_account_wallet_id":"5874e1ed-5c07-4475-b55b-ff08beead242"
-}
