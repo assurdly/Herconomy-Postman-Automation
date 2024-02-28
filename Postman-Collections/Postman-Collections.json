@@ -7393,12 +7393,45 @@
 						},
 						{
 							"name": "Add Funds with Kiddosave Wallet",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c24d1f15-47d5-44ed-8de7-7c8d59be2be2",
+										"exec": [
+											"pm.test(\"Response status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Status code name has string\", function () {\r",
+											"    pm.response.to.have.status(\"Created\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response is an object with required properties\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData).to.be.an('object');\r",
+											"    pm.expect(jsonData).to.have.property('parent_email');\r",
+											"    pm.expect(jsonData).to.have.property('kiddosave_goals');\r",
+											"    pm.expect(jsonData).to.have.property('kid_account');\r",
+											"    pm.expect(jsonData).to.have.property('amount');\r",
+											"    pm.expect(jsonData).to.have.property('channel');\r",
+											"    pm.expect(jsonData).to.have.property('status');\r",
+											"    pm.expect(jsonData).to.have.property('trans_ref');\r",
+											"    pm.expect(jsonData).to.have.property('created_at');\r",
+											"    pm.expect(jsonData).to.have.property('modified_at');\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "e3873ac1-36f1-4f51-b208-fda99384c809",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Authorization",
