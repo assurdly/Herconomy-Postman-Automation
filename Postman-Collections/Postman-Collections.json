@@ -7392,6 +7392,144 @@
 							]
 						},
 						{
+							"name": "Add Funds with Kiddosave Wallet - Blank field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c24d1f15-47d5-44ed-8de7-7c8d59be2be2",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Response is an object with message property\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('message');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "6229d8f9-3bc8-4c85-acd9-61060a1ce57f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": \"\",\n    \"kiddosave_goal_id\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://staging.herconomy.com/api/v1/kiddosave/goals/add_funds_with_kiddo_wallet/"
+							},
+							"response": []
+						},
+						{
+							"name": "Add Funds with Kiddosave Wallet - Missing amount",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c24d1f15-47d5-44ed-8de7-7c8d59be2be2",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Response is an object with message property\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('message');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "4888a1be-10d8-4783-b00f-b08e60054574",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": \"\",\n    \"kiddosave_goal_id\": \"{{kidGoalId}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://staging.herconomy.com/api/v1/kiddosave/goals/add_funds_with_kiddo_wallet/"
+							},
+							"response": []
+						},
+						{
+							"name": "Add Funds with Kiddosave Wallet - Missing goal id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c24d1f15-47d5-44ed-8de7-7c8d59be2be2",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Response is an object with message property\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('message');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "1bcfbe99-8828-413f-bfce-8c766926f1e3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": \"50\",\n    \"kiddosave_goal_id\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://staging.herconomy.com/api/v1/kiddosave/goals/add_funds_with_kiddo_wallet/"
+							},
+							"response": []
+						},
+						{
 							"name": "Add Funds with Kiddosave Wallet",
 							"event": [
 								{
