@@ -1,0 +1,10 @@
+{
+    "amount": "100",
+    "service": "9Mobile",
+    "category": "Data",
+    "phone": "08173106732",
+    "product_id": "9MO-650MB-2",
+    "password": "Test419$"
+}
+
+

@@ -1,0 +1,1 @@
+{"message":["wallet id is required"]}

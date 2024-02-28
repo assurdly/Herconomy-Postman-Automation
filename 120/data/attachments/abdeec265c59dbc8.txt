@@ -1,0 +1,12 @@
+/* var resp = JSON.parse(responseBody);
+
+
+pm.test("Status code is 400", function () {
+    pm.response.to.have.status(400);
+});
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("Bad Request");
+});
+pm.test("Empty product_id error message returned", function () {
+   pm.expect(resp.message.product_id[0]).to.eql("Inputed product_id cannot be empty")
+})*/

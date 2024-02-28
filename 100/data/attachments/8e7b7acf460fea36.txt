@@ -1,3 +1,0 @@
-{
-    "kid_account_id":"0e3753d8-3ae5-44f3-9fc0-5bc06b367dc0"
-}
