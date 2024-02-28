@@ -7390,6 +7390,18 @@
 									"body": "{\n    \"count\": 2,\n    \"pages\": 1,\n    \"result\": [\n        {\n            \"id\": \"6e70e837-22f3-49ff-9c59-6e47b76288ac\",\n            \"parent_email\": \"ugokingsley5@gmail.com\",\n            \"kiddosave_goals\": \"905ae906-05cd-4fb9-84ac-d4111c035cd1\",\n            \"kid_account\": \"d83de287-60d6-4273-9a8c-caad91843488\",\n            \"trans_type\": \"deposit\",\n            \"amount\": \"500.00\",\n            \"ref\": \"HERCKIDGO9C2D8165D2827798F3\",\n            \"prev_balance\": null,\n            \"current_balance\": \"510.00\",\n            \"created_at\": \"2023-11-26T23:07:37.074289Z\",\n            \"modified_at\": \"2023-11-26T23:07:37.757358Z\"\n        },\n        {\n            \"id\": \"2190efa3-4e91-4b6b-aaef-e1274628d9c2\",\n            \"parent_email\": \"ugokingsley5@gmail.com\",\n            \"kiddosave_goals\": \"905ae906-05cd-4fb9-84ac-d4111c035cd1\",\n            \"kid_account\": \"d83de287-60d6-4273-9a8c-caad91843488\",\n            \"trans_type\": \"deposit\",\n            \"amount\": \"10.00\",\n            \"ref\": \"HERCKIDGOAA95F8D92AE05C4106\",\n            \"prev_balance\": null,\n            \"current_balance\": \"10.00\",\n            \"created_at\": \"2023-11-26T22:56:23.818241Z\",\n            \"modified_at\": \"2023-11-26T22:56:24.489383Z\"\n        }\n    ],\n    \"page\": 1\n}"
 								}
 							]
+						},
+						{
+							"name": "Add Funds with Kiddosave Wallet",
+							"id": "e3873ac1-36f1-4f51-b208-fda99384c809",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "7947f3e1-6534-4a2e-a990-3a2b3b683df8"
