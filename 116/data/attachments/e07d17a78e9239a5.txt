@@ -1,0 +1,1 @@
+{"message":{"category":[],"service":["Inputed service must be one of: ['Airtel', '9Mobile', 'Globacom', 'Mtn', 'Smile', 'Ntel']"]}}
