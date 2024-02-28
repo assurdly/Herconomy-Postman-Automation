@@ -1,0 +1,12 @@
+var resp = JSON.parse(responseBody);
+
+
+pm.test("Status code is 400", function () {
+    pm.response.to.have.status(400);
+});
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("Bad Request");
+});
+pm.test("Empty service error message returned", function () {
+   pm.expect(resp.message.service[0]).to.eql("Inputed service cannot be empty")
+})

@@ -1,0 +1,1 @@
+{"authorization_url":"https://checkout.paystack.com/adeptgaz224aysx","access_code":"adeptgaz224aysx","reference":"HERCKIDGO3D6C0CFF9E22BC1D1C"}
