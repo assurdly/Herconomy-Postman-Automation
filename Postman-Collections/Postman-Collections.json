@@ -7484,6 +7484,52 @@
 							"response": []
 						},
 						{
+							"name": "Add Funds with Kiddosave Wallet - Negative amount",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c24d1f15-47d5-44ed-8de7-7c8d59be2be2",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Response is an object with message property\", function () {",
+											"    pm.expect(pm.response.json()).to.be.an('object').that.has.property('message');",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "08ec6374-7318-448f-bd84-3e242e1ce865",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "JWT {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": \"-34\",\n    \"kiddosave_goal_id\": \"{{kidGoalId}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://staging.herconomy.com/api/v1/kiddosave/goals/add_funds_with_kiddo_wallet/"
+							},
+							"response": []
+						},
+						{
 							"name": "Add Funds with Kiddosave Wallet - Missing goal id",
 							"event": [
 								{
