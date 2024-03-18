@@ -1,0 +1,12 @@
+var jsonData = pm.response.json();
+pm.test("Status code is 400", function () {
+    pm.response.to.have.status(400);
+});
+
+pm.test("Response is a valid JSON object", function () {
+    pm.response.to.be.json;
+});
+
+pm.test("Blank wallet id message is returned", function () {
+   pm.expect(jsonData.message).to.eql("wallet id is required")
+});

@@ -1,4 +1,0 @@
-{
-    "kid_account_id": "2269df4e-d376-4cbc-a661-f1032e953514",
-    "status": "approved"
-}
