@@ -8172,6 +8172,26 @@
 		{
 			"key": "reference",
 			"value": ""
+		},
+		{
+			"key": "mtn_id",
+			"value": ""
+		},
+		{
+			"key": "airtel_id",
+			"value": ""
+		},
+		{
+			"key": "9mobile_id",
+			"value": ""
+		},
+		{
+			"key": "globacom_id",
+			"value": ""
+		},
+		{
+			"key": "mtnTransId",
+			"value": ""
 		}
 	]
 }
