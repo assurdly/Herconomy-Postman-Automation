@@ -1,0 +1,32 @@
+
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+
+pm.test("Response has the required fields", function () {
+    const responseData = pm.response.json();
+    
+    pm.expect(responseData).to.be.an('object');
+    pm.expect(responseData.status_code).to.exist.and.to.be.a('string');
+    pm.expect(responseData.service_name).to.exist.and.to.be.a('string');
+    pm.expect(responseData.packages).to.exist.and.to.be.an('array');
+    pm.expect(responseData.other_json).to.exist.and.to.be.an('object');
+});
+
+
+pm.test("Verify that the 'packages' array is present and contains at least one element", function () {
+    const responseData = pm.response.json();
+    
+    pm.expect(responseData.packages).to.exist.and.to.be.an('array');
+    pm.expect(responseData.packages.length).to.be.at.least(1, "At least one element should be present in the 'packages' array");
+});
+
+
+pm.test("Verify that the 'other_json' object is empty", function () {
+    const responseData = pm.response.json();
+    
+    pm.expect(responseData).to.be.an('object');
+    pm.expect(responseData.other_json).to.be.empty;
+});
+

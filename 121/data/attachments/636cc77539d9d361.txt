@@ -1,0 +1,9 @@
+{
+    "amount": "100",
+    "service": "Globacom",
+    "category": "Airtime",
+    "phone": "08054726044",
+    "password": "Test419$"
+}
+
+

@@ -1,0 +1,21 @@
+pm.test("Response status code is 201", function () {
+    pm.response.to.have.status(201);
+});
+
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("Created");
+});
+
+pm.test("Response is an object with required properties", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.be.an('object');
+    pm.expect(jsonData).to.have.property('parent_email');
+    pm.expect(jsonData).to.have.property('kiddosave_goals');
+    pm.expect(jsonData).to.have.property('kid_account');
+    pm.expect(jsonData).to.have.property('amount');
+    pm.expect(jsonData).to.have.property('channel');
+    pm.expect(jsonData).to.have.property('status');
+    pm.expect(jsonData).to.have.property('trans_ref');
+    pm.expect(jsonData).to.have.property('created_at');
+    pm.expect(jsonData).to.have.property('modified_at');
+});

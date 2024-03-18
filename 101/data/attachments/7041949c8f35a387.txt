@@ -1,1 +1,0 @@
-{"message":["Sorry, You cannot claim interest for this current month yet!"]}
